@@ -14,7 +14,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"start": "node ./node_modules/http-server/bin/http-server -p 8888"
+    "start": "node ./node_modules/http-server/bin/http-server -p 8888"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,8 @@
   },
   "homepage": "https://github.com/ginovski/Team-Caipirinha#readme",
   "dependencies": {
-    "http-server": "^0.8.0"
+    "bootstrap": "^3.3.5",
+    "http-server": "^0.8.0",
+    "jquery": "^2.1.4"
   }
 }
