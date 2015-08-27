@@ -4,7 +4,10 @@
     "configFile": "app/config/config.js",
     "dependencies": {
       "bootstrap": "github:twbs/bootstrap@^3.3.5",
-      "jquery": "github:components/jquery@^2.1.4"
+      "handlebars": "github:components/handlebars.js@^3.0.3",
+      "jquery": "github:components/jquery@^2.1.4",
+      "sammy": "npm:knottie-sammy@^0.7.6",
+      "viewer": "npm:viewer@^0.10.10"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.1.13",
