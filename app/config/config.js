@@ -21,6 +21,7 @@ System.config({
     "core-js": "npm:core-js@0.9.18",
     "handlebars": "github:components/handlebars.js@3.0.3",
     "jquery": "github:components/jquery@2.1.4",
+    "parse": "github:albemuth/parse-js-sdk@1.4.2",
     "sammy": "npm:knottie-sammy@0.7.6",
     "viewer": "npm:viewer@0.10.10",
     "github:jspm/nodelibs-buffer@0.1.0": {

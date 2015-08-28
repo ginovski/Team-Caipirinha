@@ -6,6 +6,7 @@
       "bootstrap": "github:twbs/bootstrap@^3.3.5",
       "handlebars": "github:components/handlebars.js@^3.0.3",
       "jquery": "github:components/jquery@^2.1.4",
+      "parse": "github:albemuth/parse-js-sdk@^1.4.2",
       "sammy": "npm:knottie-sammy@^0.7.6",
       "viewer": "npm:viewer@^0.10.10"
     },
