@@ -7,7 +7,7 @@ var partialsHelper = (function(){
                 }, function(err){
                     reject(err);
                 })
-        })
+        });
 
         return promise;
     }
