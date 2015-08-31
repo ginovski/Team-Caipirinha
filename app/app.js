@@ -8,7 +8,7 @@ import UsersController from 'app/controllers/UsersController'
 Parse.initialize(appConfig.parseConfig.applicationId, appConfig.parseConfig.javaScriptKey);
 
 var app = Sammy('#main', function() {
-    this.get('#/', HomeController.index);
+    //this.get('#/', HomeController.index);
     this.get('#/login', UsersController.login);
     this.get('#/register', UsersController.register);
 });
