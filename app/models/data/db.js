@@ -24,7 +24,8 @@ var db = (function () {
 
     return {
         add: add,
-        getById: getById
+        getById: getById,
+        query: query
     };
 }());
 
