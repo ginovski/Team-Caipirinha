@@ -9,6 +9,9 @@
 </head>
 
 <body>
+<p style="text-align: center; padding: 0">&copy;Copyright - Team Caipirinha 2015</p>
+<script src="jspm_packages/github/components/jquery@2.1.4/jquery.js"></script>
+<script src="jspm_packages/github/twbs/bootstrap@3.3.5/js/bootstrap.js"></script>
 <div id="wrapper">
     <div class="row">
         <div class="col-md-12">
@@ -23,7 +26,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="#/">Caipirinha library</a>
+                            <a class="navbar-brand" href="#/"><span class="glyphicon glyphicon-glass"></span>Caipirinha library</a>
                         </div>
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
@@ -32,18 +35,27 @@
                                 <li><a href="#/latest">Latest</a></li>
                             </ul>
                             <div class="buttonWrap pull-right">
-                                <a href="#/login" class="btn btn-primary navbar-btn"> Login</a>
-                                <a href="#/register" class="btn btn-primary navbar-btn"> Register</a>
+                                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
+                                        data-target="#signUp">Sign up
+                                </button>
+                                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
+                                        data-target="#signIn">Sign in
+                                </button>
                             </div>
                             <form class="navbar-form navbar-left pull-right" role="search">
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Search">
                                 </div>
-                                <button type="submit" class="btn btn-default">Submit</button>
+                                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
                             </form>
                         </div>
                     </div>
                 </nav>
+            </div>
+            <div class="jumbotron text-center">
+                <h1>E-library by team Caipirinha</h1>
+
+
             </div>
             <div id="col-md-8">
                 <div id="main">
@@ -91,10 +103,90 @@
             </div>
         </div>
     </div>
+
+    <!--Sign Up Modal-->
+    <div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="signUpLabel">Sign up</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-wrapper">
+                        <form role="form" method="post">
+                            <div class="form-group">
+                                <label for="signUp-email">E-mail:</label>
+                                <input type="text" class="form-control" id="signUp-email" name="email"
+                                       placeholder="E-mail">
+                            </div>
+                            <div class="form-group">
+                                <label for="signUp-username">Username:</label>
+                                <input type="text" class="form-control" id="signUp-username" name="username"
+                                       placeholder="Username">
+                            </div>
+                            <div class="form-group">
+                                <label for="signUp-password">Password:</label>
+                                <input type="password" class="form-control" id="signUp-password" name="password"
+                                       placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="signUp-confirm-password">Confirm Password:</label>
+                                <input type="password" class="form-control" id="signUp-confirm-password"
+                                       name="confirm-password"
+                                       placeholder="Confirm Password">
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Sign up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Sign In Modal-->
+    <div class="modal fade" id="signIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="signInLabel">Sign in</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-wrapper">
+                        <form role="form" method="post">
+                            <div class="form-group">
+                                <label for="email">E-mail:</label>
+                                <input type="text" class="form-control" id="email" name="username" placeholder="E-mail">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" class="form-control" id="password" name="password"
+                                       placeholder="Password">
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Sign in</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
-<p style="text-align: center; padding: 0">&copy;Copyright - Team Caipirinha 2015</p>
-<script src="jspm_packages/github/components/jquery@2.1.4/jquery.js"></script>
-<script src="jspm_packages/github/twbs/bootstrap@3.3.5/js/bootstrap.js"></script>
 <script src="jspm_packages/system.js"></script>
 <script src="app/config/config.js"></script>
 <script src="jspm_packages/github/albemuth/parse-js-sdk@1.4.2/lib/parse.js"></script>
