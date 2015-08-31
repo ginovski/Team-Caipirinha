@@ -10,6 +10,7 @@ Parse.initialize(appConfig.parseConfig.applicationId, appConfig.parseConfig.java
 var app = Sammy('#main', function() {
     this.get('#/', HomeController.index);
     this.get('#/login', UsersController.login);
+    this.get('#/register', UsersController.register);
 });
 
 app.run('#/');

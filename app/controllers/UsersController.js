@@ -10,8 +10,17 @@ var UsersController = (function(){
             });
     }
 
+    function register() {
+        partialsHelper
+            .getPartialViewTemplate('users/register')
+            .then(function(renderedHtml){
+                partialsHelper.addPartialToPage(renderedHtml);
+            });
+    }
+
     return {
-        login: login
+        login : login,
+        register : register
     };
 }());
 
