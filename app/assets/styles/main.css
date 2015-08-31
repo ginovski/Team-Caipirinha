@@ -7,3 +7,12 @@
     border-radius: 2px;
     box-shadow: 0 0 10px 0 rgba(12, 3, 25, 0.8);
 }
+
+.form-wrapper {
+    margin: 0 20px;
+    width: 80%;
+}
+
+.form-wrapper input {
+    width: 300px;
+}
