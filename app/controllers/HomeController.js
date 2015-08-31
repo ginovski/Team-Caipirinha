@@ -8,9 +8,8 @@ var HomeController = (function(){
         partialsHelper
             .getPartialViewTemplate('index')
             .then(function(template){
-                var renderedHtml = htmlRenderer.render(template, {title: 'TestIndex', body: 'TestBody'});
 
-                partialsHelper.addPartialToPage(renderedHtml);
+                partialsHelper.addPartialToPage(template);
             });
     }
 
