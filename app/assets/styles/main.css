@@ -1,0 +1,9 @@
+#wrapper {
+    margin: 20px auto;
+    /*padding: 20px;*/
+    /*max-width: 1020px;*/
+    width: 70%;
+    /*border: 1px solid #878E63;*/
+    border-radius: 2px;
+    box-shadow: 0 0 10px 0 rgba(12, 3, 25, 0.8);
+}
