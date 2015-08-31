@@ -8,35 +8,35 @@ class Book {
         return this;
     }
 
-    get title() {
-        return this._title;
+    get getTitle() {
+        return this.title;
     }
 
-    set title(value) {
+    set setTitle(value) {
         //Validate
-        this._title = value;
+        this.title = value;
 
         return this;
     }
 
-    get author() {
-        return this._author;
+    get getAuthor() {
+        return this.author;
     }
 
-    set author(value) {
+    set setAuthor(value) {
         //Validate
-        this._author = value;
+        this.author = value;
 
         return this;
     }
 
-    get bookUrl() {
-        return this._bookUrl;
+    get getBookUrl() {
+        return this.bookUrl;
     }
 
-    set bookUrl(value) {
+    set setBookUrl(value) {
         //Validate
-        this._bookUrl = value;
+        this.bookUrl = value;
 
         return this;
     }
