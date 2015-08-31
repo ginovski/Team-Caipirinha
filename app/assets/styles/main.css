@@ -25,6 +25,19 @@
     padding: 10px 15px;
 }
 
+img {
+    width: 100px;
+    height: 100px;
+}
+
+#main {
+    margin: 0 auto;
+}
+
+.bookContainer {
+    text-align: center;
+}
+
 /*
 footer {
     background-color: black;
