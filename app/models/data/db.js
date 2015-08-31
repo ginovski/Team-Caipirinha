@@ -11,8 +11,21 @@ var db = (function () {
         data.save(dataObject);
     }
 
+    function getById(dataClass, id){
+        var query = new Parse.Query(dataClass);
+        return query.get(id);
+    }
+
+    function query(dataClass){
+        var query = new Parse.Query(dataClass);
+
+        return query;
+    }
+
     return {
-        add: add
+        add: add,
+        getById: getById,
+        query: query
     };
 }());
 
