@@ -1,8 +1,10 @@
 import sammy from 'sammy'
-import HomeController from 'app/controllers/HomeController'
-import parseConfig from 'app/config/appConfig'
+import appConfig from 'app/config/appConfig'
+import 'parse'
 
-Parse.initialize(parseConfig.applicationId, parseConfig.javaScriptKey);
+import HomeController from 'app/controllers/HomeController'
+
+Parse.initialize(appConfig.parseConfig.applicationId, appConfig.parseConfig.javaScriptKey);
 
 var app = Sammy('#main', function() {
     this.get('#/', HomeController.index);
