@@ -10,7 +10,8 @@ var app = Sammy('#main', function() {
     this.get('#/register', UsersController.register);
     this.post('#/login', UsersController.postLogin);
     this.post('#/register', UsersController.postRegister);
-    this.get('#/titles', BooksController.titles)
+    this.get('#/titles', BooksController.titles);
+    this.get('#/books/details/:id', BooksController.details)
 });
 
 app.run('#/');

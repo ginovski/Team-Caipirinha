@@ -11,9 +11,14 @@ var booksModel = (function () {
         return db.getById('Book', id);
     }
 
+    function getAll(){
+        return db.query('Book').find();
+    }
+
     return {
         add: add,
-        getById: getById
+        getById: getById,
+        getAll: getAll
     }
 }());
 

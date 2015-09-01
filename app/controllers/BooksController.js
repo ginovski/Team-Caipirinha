@@ -5,15 +5,25 @@ import booksModel from 'app/models/booksModel'
 
 var BooksController = (function(){
     function titles(){
-        partialsHelper
-            .getPartialViewTemplate('books/titles')
-            .then(function(template){
-                partialsHelper.addPartialToPage(template);
+        booksModel.getAll()
+            .then(function(books) {
+                var data = books;
+                partialsHelper
+                    .getPartialViewTemplate('books/titles')
+                    .then(function (template) {
+                        var htmlParsed = htmlRenderer.render(template,data);
+                        partialsHelper.addPartialToPage(htmlParsed);
+                    });
             });
     }
 
+    function details(context){
+
+    }
+
     return {
-        titles: titles
+        titles: titles,
+        details: details
     };
 }());
 
