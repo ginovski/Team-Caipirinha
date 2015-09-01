@@ -3,4 +3,4 @@ var parseConfig = {
     javaScriptKey: "AmAQxlbo87rxRt57uYVmZCC9PjXm432SRZA8UJ9k"
 };
 
-export default {parseConfig}
+export default {parseConfig};

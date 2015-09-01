@@ -1,11 +1,11 @@
-import Handlebars from 'handlebars'
+import Handlebars from 'handlebars';
 
-var htmlRenderer = (function() {
+var htmlRenderer = (function () {
     function renderArray(htmlTemplate, data) {
         var source = htmlTemplate;
         var template = Handlebars.compile(source);
         var htmlWrapper = '';
-        data.forEach(function(book){
+        data.forEach(function (book) {
             var html = template(book);
             htmlWrapper += html;
         });

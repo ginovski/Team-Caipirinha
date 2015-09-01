@@ -6,8 +6,9 @@
       "bootstrap": "github:twbs/bootstrap@^3.3.5",
       "handlebars": "github:components/handlebars.js@^3.0.3",
       "jquery": "github:components/jquery@^2.1.4",
+      "live-server": "npm:live-server@^0.8.1",
       "parse": "github:albemuth/parse-js-sdk@^1.4.2",
-      "sammy": "npm:knottie-sammy@^0.7.6",
+      "sammy": "npm:sammy@^0.7.6",
       "viewer": "npm:viewer@^0.10.10"
     },
     "devDependencies": {
@@ -33,5 +34,8 @@
   "bugs": {
     "url": "https://github.com/ginovski/Team-Caipirinha/issues"
   },
-  "homepage": "https://github.com/ginovski/Team-Caipirinha#readme"
+  "homepage": "https://github.com/ginovski/Team-Caipirinha#readme",
+  "devDependencies": {
+    "jspm": "^0.16.2"
+  }
 }

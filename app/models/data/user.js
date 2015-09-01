@@ -1,5 +1,5 @@
-import appConfig from 'app/config/appConfig'
-import 'parse'
+import appConfig from 'app/config/appConfig';
+import 'parse';
 
 Parse.initialize(appConfig.parseConfig.applicationId, appConfig.parseConfig.javaScriptKey);
 
@@ -9,7 +9,7 @@ var user = (function () {
     }
 
     function signOut() {
-        return Parse.User.logOut()
+        return Parse.User.logOut();
     }
 
     function signUp(email, username, password) {
@@ -22,7 +22,7 @@ var user = (function () {
         return user.signUp(null);
     }
 
-    function getCurrentUser(){
+    function getCurrentUser() {
         return Parse.User.current();
     }
 
@@ -31,7 +31,7 @@ var user = (function () {
         signUp,
         signOut,
         getCurrentUser
-    }
+    };
 }());
 
 export default user;
