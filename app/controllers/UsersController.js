@@ -1,6 +1,8 @@
 import htmlRenderer from 'app/views/helpers/htmlRenderer'
 import partialsHelper from 'app/views/helpers/partialsHelper'
 
+import userModel from 'app/models/data/user'
+
 var UsersController = (function(){
     function login(){
         partialsHelper.getPartialViewTemplate('users/login')
@@ -17,11 +19,24 @@ var UsersController = (function(){
     }
 
     function postLogin(context){
-        console.log(context.params);
+        var username = context.params['username'];
+        var password = context.params['password'];
+
+        userModel.signIn(username, password)
+            .then(function(user){
+                context.redirect('#/titles');
+            })
     }
 
     function postRegister(context) {
-        console.log(context.params);
+        var email = context.params['email'];
+        var username = context.params['username'];
+        var password = context.params['password'];
+
+        userModel.signUp(email, username, password)
+            .then(function(user){
+                context.redirect('#/');
+            })
     }
 
     return {

@@ -3,37 +3,13 @@ import 'parse'
 
 Parse.initialize(appConfig.parseConfig.applicationId, appConfig.parseConfig.javaScriptKey);
 
-var user = (function() {
+var user = (function () {
     function signIn(username, password) {
-        //var promise = new Promise(function(resolve, reject) {
-        //    Parse.User.logIn(username, password)
-        //        .then(function() {
-        //            resolve();
-        //        }, function(err) {
-        //            return Parse.User.signUp(username, password)
-        //        })
-        //        .then(resolve, reject);
-        //});
-
-        //return promise;
-
-        Parse.User.logIn(username, password, {
-            success: function(user) {
-                // Do stuff after successful login.
-            },
-            error: function(user, error) {
-                // The login failed. Check error to see why.
-            }
-        });
+        return Parse.User.logIn(username, password);
     }
 
     function signOut() {
-        var promise = new Promise(function(resolve, reject) {
-            Parse.User.logOut()
-                .then(resolve, reject);
-        });
-
-        return promise;
+        return Parse.User.logOut()
     }
 
     function signUp(email, username, password) {
@@ -43,20 +19,18 @@ var user = (function() {
         user.set("username", username);
         user.set("password", password);
 
-        //user.signUp(null, {
-        //    success: function(user) {
-        //        // Hooray! Let them use the app now.
-        //    },
-        //    error: function(user, error) {
-        //        // Show the error message somewhere and let the user try again.
-        //        alert("Error: " + error.code + " " + error.message);
-        //    }
+        return user.signUp(null);
+    }
+
+    function getCurrentUser(){
+        return Parse.User.current();
     }
 
     return {
         signIn,
         signUp,
-        signOut
+        signOut,
+        getCurrentUser
     }
 }());
 
