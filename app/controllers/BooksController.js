@@ -11,13 +11,22 @@ var BooksController = (function(){
                 partialsHelper
                     .getPartialViewTemplate('books/titles')
                     .then(function (template) {
-                        var htmlParsed = htmlRenderer.render(template,data);
+                        var htmlParsed = htmlRenderer.renderArray(template,data);
                         partialsHelper.addPartialToPage(htmlParsed);
                     });
             });
     }
 
     function details(context){
+        booksModel.getById(context.params['id'])
+            .then(function(book) {
+                partialsHelper
+                    .getPartialViewTemplate('books/details')
+                    .then(function (template) {
+                        var htmlParsed = htmlRenderer.render(template,book.attributes);
+                        partialsHelper.addPartialToPage(htmlParsed);
+                    });
+            });
 
     }
 

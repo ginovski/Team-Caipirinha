@@ -1,7 +1,7 @@
 import Handlebars from 'handlebars'
 
 var htmlRenderer = (function() {
-    function render(htmlTemplate, data) {
+    function renderArray(htmlTemplate, data) {
         var source = htmlTemplate;
         var template = Handlebars.compile(source);
         var htmlWrapper = '';
@@ -13,7 +13,17 @@ var htmlRenderer = (function() {
         return htmlWrapper;
     }
 
+    function render(htmlTemplate, data) {
+        var source = htmlTemplate;
+        var template = Handlebars.compile(source);
+
+        var html = template(data);
+
+        return html;
+    }
+
     return {
+        renderArray: renderArray,
         render: render
     };
 }());
