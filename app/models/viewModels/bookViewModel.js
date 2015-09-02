@@ -114,7 +114,7 @@ class Book {
         return this;
     }
 
-    function isbnValidator(value){
+    /*function isbnValidator(value){
         var isbnValue = value.toString().toLowerCase().replace(/-/g, "");
 
         if(isbnValue.match(/[a-z]/i) || isbnValue.length != 13 && isbnValue.length != 10) {
@@ -143,7 +143,7 @@ class Book {
         }
 
         return true;
-    };
+    }*/
 }
 
 export default Book;
