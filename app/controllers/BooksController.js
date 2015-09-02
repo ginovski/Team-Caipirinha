@@ -27,7 +27,6 @@ var BooksController = (function () {
                         partialsHelper.addPartialToPage(htmlParsed);
                     });
             });
-
     }
 
     return {
