@@ -5,11 +5,11 @@ class Author {
         return this;
     }
 
-    get getName(){
+    get getName() {
         return this.name;
     }
 
-    set setName(value){
+    set setName(value) {
         this.name = value;
 
         return this;

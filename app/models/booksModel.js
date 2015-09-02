@@ -1,9 +1,9 @@
-import Book from 'app/models/viewModels/bookViewModel'
-import db from 'app/models/data/db'
+import Book from 'app/models/viewModels/bookViewModel';
+import db from 'app/models/data/db';
 
 var booksModel = (function () {
-    function add(title, author, url) {
-        var newBook = new Book(title, author, url);
+    function add(cover, title, author, publisher, year, pages, isbn, url) {
+        var newBook = new Book(cover, title, author, publisher, year, pages, isbn, url);
         db.add('Book', newBook);
     }
 
@@ -11,7 +11,7 @@ var booksModel = (function () {
         return db.getById('Book', id);
     }
 
-    function getAll(){
+    function getAll() {
         return db.query('Book').find();
     }
 
@@ -19,7 +19,7 @@ var booksModel = (function () {
         add: add,
         getById: getById,
         getAll: getAll
-    }
+    };
 }());
 
 export default booksModel;

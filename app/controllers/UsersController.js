@@ -1,31 +1,31 @@
-import htmlRenderer from 'app/views/helpers/htmlRenderer'
-import partialsHelper from 'app/views/helpers/partialsHelper'
+import htmlRenderer from 'app/views/helpers/htmlRenderer';
+import partialsHelper from 'app/views/helpers/partialsHelper';
 
-import userModel from 'app/models/data/user'
+import userModel from 'app/models/data/user';
 
-var UsersController = (function(){
-    function login(){
+var UsersController = (function () {
+    function login() {
         partialsHelper.getPartialViewTemplate('users/login')
-            .then(function(template){
+            .then(function (template) {
                 partialsHelper.addPartialToPage(template);
-            })
+            });
     }
 
-    function register(){
+    function register() {
         partialsHelper.getPartialViewTemplate('users/register')
-            .then(function(template){
+            .then(function (template) {
                 partialsHelper.addPartialToPage(template);
-            })
+            });
     }
 
-    function postLogin(context){
+    function postLogin(context) {
         var username = context.params['username'];
         var password = context.params['password'];
 
         userModel.signIn(username, password)
-            .then(function(user){
+            .then(function (user) {
                 context.redirect('#/titles');
-            })
+            });
     }
 
     function postRegister(context) {
@@ -34,14 +34,14 @@ var UsersController = (function(){
         var password = context.params['password'];
 
         userModel.signUp(email, username, password)
-            .then(function(user){
+            .then(function (user) {
                 context.redirect('#/');
-            })
+            });
     }
 
     return {
-        login : login,
-        register : register,
+        login: login,
+        register: register,
         postLogin: postLogin,
         postRegister: postRegister
     };

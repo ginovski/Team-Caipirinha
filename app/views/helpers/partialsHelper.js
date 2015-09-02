@@ -1,22 +1,22 @@
-var partialsHelper = (function(){
-    function getPartialViewTemplate(partialName){
-        var promise = new Promise(function(resolve, reject){
+var partialsHelper = (function () {
+    function getPartialViewTemplate(partialName) {
+        var promise = new Promise(function (resolve, reject) {
             $.get('app/views/partials/' + partialName + '.html')
-                .then(function(partial){
+                .then(function (partial) {
                     resolve(partial);
-                }, function(err){
+                }, function (err) {
                     reject(err);
-                })
+                });
         });
 
         return promise;
     }
 
-    function addPartialToPage(renderedPartialHtml){
+    function addPartialToPage(renderedPartialHtml) {
         $('#main').html(renderedPartialHtml);
     }
 
-    return{
+    return {
         getPartialViewTemplate: getPartialViewTemplate,
         addPartialToPage: addPartialToPage
     };
