@@ -1,4 +1,32 @@
 var validator = (function (){
+    function isInRange(value, min, max, incl){
+        if(typeof incl == 'undefined' || incl == null){
+            incl = false;
+        }
+        var len = value.length;
+            switch(incl){
+                case false:
+                    if(len > min && len < max){
+                        return true;
+                    }
+                    return false;
+                    break;
+                case true:
+                    if(len >= min && len <= max){
+                        return true;
+                    }
+                    return false;
+                    break;
+            }
+    }
+
+    function isValidName(value){
+        if(!value.match(/^[a-z]+$/i)){
+            return false;
+        }
+        return true;
+    }
+
     function isbnValidator(value){
         var isbnValue = value.toString().toLowerCase().replace(/-/g, "");
         if(isbnValue.match(/[a-z]/i) || isbnValue.length != 13 && isbnValue.length != 10) {
@@ -29,6 +57,8 @@ var validator = (function (){
     }
 
     return{
-        isbnValidator: isbnValidator
+        isbnValidator: isbnValidator,
+        isInRange: isInRange,
+        isValidName: isValidName
     };
 }());

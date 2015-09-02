@@ -31,7 +31,7 @@ class Book {
     }
 
     set setTitle(value) {
-        if (value.length < 2 || 60 < value.length) {
+        if (!validator.isValidName(value) || !validator.isInRange(value, 2, 60)) {
             alert('Book title should be in range from 2 to 60 characters');
         } else {
             this.title = value;
@@ -44,7 +44,7 @@ class Book {
     }
 
     set setAuthor(value) {
-        if (value.length < 2 || 40 < value.length) {
+        if (!validator.isValidName(value) || !validator.isInRange(value, 2, 40)) {
             alert('Book author should be in range from 2 to 40 characters');
         } else {
             this.author = value;
@@ -57,7 +57,7 @@ class Book {
     }
 
     set setPublisher(value) {
-        if (value.length < 2 || 35 < value.length) {
+        if (!validator.isInRange(value, 2, 35)) {
             alert('Book publisher should be in range from 2 to 35 characters');
         } else {
             this.publisher = value;
@@ -83,7 +83,7 @@ class Book {
     }
 
     set setPages(value) {
-        if (typeof value !== number || value.length < 1 || 3000 < value.length) {
+        if (typeof value !== number || !validator.isInRange(value, 1, 3000)) {
             alert('Book pages should be a number in range from 1 to 3000');
         } else {
             this.pages = value;
