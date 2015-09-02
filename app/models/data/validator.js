@@ -56,7 +56,7 @@ var validator = (function (){
         return true;
     }
 
-    return{
+    return {
         isbnValidator: isbnValidator,
         isInRange: isInRange,
         isValidName: isValidName
