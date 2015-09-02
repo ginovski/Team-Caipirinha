@@ -113,7 +113,7 @@ class Book {
         this.bookUrl = value;
         return this;
     }
-
+    // TODO: Move the ISBN validator outside the Book class into a separate validator class.
     /*function isbnValidator(value){
         var isbnValue = value.toString().toLowerCase().replace(/-/g, "");
 
