@@ -18,10 +18,24 @@ var UsersController = (function () {
             });
     }
 
+    function logout(context){
+        partialsHelper.getPartialViewTemplate('users/loggedOut')
+            .then(function (template) {
+                partialsHelper.addToPage(template);
+            });
+        userModel.signOut()
+            .then(function(){
+                context.redirect('#/');
+            });
+    }
+
     function postLogin(context) {
         var username = context.params['username'];
         var password = context.params['password'];
-
+        partialsHelper.getPartialViewTemplate('users/loggedIn')
+            .then(function (template) {
+                partialsHelper.addToPage(template);
+            });
         userModel.signIn(username, password)
             .then(function (user) {
                 context.redirect('#/titles');
@@ -42,6 +56,7 @@ var UsersController = (function () {
     return {
         login: login,
         register: register,
+        logout: logout,
         postLogin: postLogin,
         postRegister: postRegister
     };

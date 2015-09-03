@@ -8,6 +8,7 @@ var app = new Sammy('#main', function () {
     this.get('#/', HomeController.index);
     this.get('#/login', UsersController.login);
     this.get('#/register', UsersController.register);
+    this.get('#/loggedOut', UsersController.logout);
     this.post('#/login', UsersController.postLogin);
     this.post('#/register', UsersController.postRegister);
     this.get('#/titles', BooksController.titles);

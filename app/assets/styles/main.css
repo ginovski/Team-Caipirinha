@@ -13,14 +13,6 @@ body {
     margin: 0;
 }
 
-.visible{
-    display: block;
-}
-
-.hidden{
-    display: none;
-}
-
 .navbar-brand {
     padding: 5px;
 }
