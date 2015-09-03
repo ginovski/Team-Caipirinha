@@ -16,9 +16,14 @@ var partialsHelper = (function () {
         $('#main').html(renderedPartialHtml);
     }
 
+    function addToPage(renderedPartialHtml) {
+        $('#loginControls').html(renderedPartialHtml);
+    }
+
     return {
         getPartialViewTemplate: getPartialViewTemplate,
-        addPartialToPage: addPartialToPage
+        addPartialToPage: addPartialToPage,
+        addToPage: addToPage
     };
 }());
 
