@@ -1,0 +1,1 @@
+module.exports = require("npm:compressible@2.0.5/index");

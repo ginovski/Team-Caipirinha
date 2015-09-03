@@ -1,0 +1,46 @@
+{
+  "name": "knottie-sammy",
+  "version": "0.7.6",
+  "main": "lib/sammy.js",
+  "maintainers": [
+    {
+      "name": "ebiven",
+      "email": "eric@biven.us"
+    }
+  ],
+  "description": "Sammy is a RESTful Evented JavaScript framework built on top of jQuery",
+  "keywords": [
+    "framework",
+    "jquery",
+    "sammy"
+  ],
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "homepage": "http://code.quirkey.com/sammy",
+  "_id": "knottie-sammy@0.7.6",
+  "_shasum": "bff888cbb17a837c80f6d523e7bc4ae926595b97",
+  "_from": "./",
+  "_npmVersion": "1.4.7",
+  "_npmUser": {
+    "name": "ebiven",
+    "email": "eric@biven.us"
+  },
+  "dist": {
+    "shasum": "bff888cbb17a837c80f6d523e7bc4ae926595b97",
+    "tarball": "http://registry.npmjs.org/knottie-sammy/-/knottie-sammy-0.7.6.tgz"
+  },
+  "format": "cjs",
+  "ignore": [
+    "node_modules"
+  ],
+  "registry": "npm",
+  "dependencies": {
+    "process": "github:jspm/nodelibs-process@^0.1.0",
+    "buffer": "github:jspm/nodelibs-buffer@^0.1.0",
+    "fs": "github:jspm/nodelibs-fs@^0.1.0",
+    "path": "github:jspm/nodelibs-path@^0.1.0"
+  }
+}

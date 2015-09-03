@@ -1,0 +1,1 @@
+module.exports = require("npm:taskgroup@2.0.0/out/lib/taskgroup");

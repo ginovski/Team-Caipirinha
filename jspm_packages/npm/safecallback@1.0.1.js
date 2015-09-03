@@ -1,0 +1,1 @@
+module.exports = require("npm:safecallback@1.0.1/lib/safecallback");

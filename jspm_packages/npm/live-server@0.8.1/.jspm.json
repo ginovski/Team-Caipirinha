@@ -1,0 +1,73 @@
+{
+  "name": "live-server",
+  "version": "0.8.1",
+  "description": "simple development http server with live reload capability",
+  "keywords": [
+    "front-end",
+    "development",
+    "tool",
+    "server",
+    "http",
+    "cli"
+  ],
+  "author": {
+    "name": "Tapio Vierros"
+  },
+  "scripts": {
+    "test": "jshint *.js"
+  },
+  "bin": {
+    "live-server": "./live-server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tapio/live-server.git"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "preferGlobal": true,
+  "license": "MIT",
+  "gitHead": "5f3ecc0752873cdd7358f8ca79884ae2f5d4a924",
+  "bugs": {
+    "url": "https://github.com/tapio/live-server/issues"
+  },
+  "_id": "live-server@0.8.1",
+  "_shasum": "221e0a0f58656b38993e3b536b060065dce47b3f",
+  "_from": ".",
+  "_npmVersion": "1.4.21",
+  "_npmUser": {
+    "name": "tapio",
+    "email": "tapiovierros@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "tapio",
+      "email": "tapiovierros@gmail.com"
+    }
+  ],
+  "dist": {
+    "shasum": "221e0a0f58656b38993e3b536b060065dce47b3f",
+    "tarball": "http://registry.npmjs.org/live-server/-/live-server-0.8.1.tgz"
+  },
+  "format": "cjs",
+  "ignore": [
+    "node_modules"
+  ],
+  "registry": "npm",
+  "dependencies": {
+    "connect": "connect@^2.0.0",
+    "send": "send@*",
+    "colors": "colors@*",
+    "open": "open@*",
+    "watchr": "watchr@~2.3.0",
+    "faye-websocket": "faye-websocket@~0.9.0",
+    "event-stream": "event-stream@*",
+    "path": "github:jspm/nodelibs-path@^0.1.0",
+    "systemjs-json": "github:systemjs/plugin-json@^0.1.0",
+    "process": "github:jspm/nodelibs-process@^0.1.0",
+    "fs": "github:jspm/nodelibs-fs@^0.1.0",
+    "url": "github:jspm/nodelibs-url@^0.1.0",
+    "http": "github:jspm/nodelibs-http@^1.7.0"
+  }
+}

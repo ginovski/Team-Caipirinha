@@ -1,0 +1,1 @@
+module.exports = require("npm:uid-safe@2.0.0/index");

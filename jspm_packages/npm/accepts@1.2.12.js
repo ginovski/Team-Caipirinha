@@ -1,0 +1,1 @@
+module.exports = require("npm:accepts@1.2.12/index");

@@ -1,0 +1,1 @@
+module.exports = require("npm:viewer@0.10.10/dist/crocodoc.viewer");

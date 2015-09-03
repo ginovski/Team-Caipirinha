@@ -1,0 +1,1 @@
+module.exports = require("npm:compression@1.5.2/index");

@@ -1,0 +1,1 @@
+module.exports = require("npm:event-stream@3.3.1/index");

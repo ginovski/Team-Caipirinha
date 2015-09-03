@@ -1,0 +1,1 @@
+module.exports = require("npm:basic-auth-connect@1.0.0/index");

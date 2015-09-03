@@ -1,0 +1,1 @@
+module.exports = require("npm:ambi@2.0.0/out/lib/ambi");

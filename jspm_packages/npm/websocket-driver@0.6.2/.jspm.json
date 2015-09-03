@@ -1,0 +1,69 @@
+{
+  "name": "websocket-driver",
+  "description": "WebSocket protocol handler with pluggable I/O",
+  "homepage": "http://github.com/faye/websocket-driver-node",
+  "author": {
+    "name": "James Coglan",
+    "email": "jcoglan@gmail.com",
+    "url": "http://jcoglan.com/"
+  },
+  "keywords": [
+    "websocket"
+  ],
+  "license": "MIT",
+  "version": "0.6.2",
+  "engines": {
+    "node": ">=0.6.0"
+  },
+  "main": "./lib/websocket/driver",
+  "devDependencies": {
+    "jstest": "",
+    "permessage-deflate": ""
+  },
+  "scripts": {
+    "test": "jstest spec/runner.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/faye/websocket-driver-node.git"
+  },
+  "bugs": {
+    "url": "http://github.com/faye/websocket-driver-node/issues"
+  },
+  "gitHead": "fa8b82d424bddef1eba51e725ddc6a48965fd605",
+  "_id": "websocket-driver@0.6.2",
+  "_shasum": "8281dba3e299e5bd7a42b65d4577a8928c26f898",
+  "_from": ".",
+  "_npmVersion": "2.11.3",
+  "_nodeVersion": "0.12.7",
+  "_npmUser": {
+    "name": "jcoglan",
+    "email": "jcoglan@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "jcoglan",
+      "email": "jcoglan@gmail.com"
+    }
+  ],
+  "dist": {
+    "shasum": "8281dba3e299e5bd7a42b65d4577a8928c26f898",
+    "tarball": "http://registry.npmjs.org/websocket-driver/-/websocket-driver-0.6.2.tgz"
+  },
+  "format": "cjs",
+  "ignore": [
+    "node_modules"
+  ],
+  "registry": "npm",
+  "dependencies": {
+    "websocket-extensions": "websocket-extensions@*",
+    "net": "github:jspm/nodelibs-net@^0.1.0",
+    "process": "github:jspm/nodelibs-process@^0.1.0",
+    "events": "github:jspm/nodelibs-events@^0.1.0",
+    "util": "github:jspm/nodelibs-util@^0.1.0",
+    "crypto": "github:jspm/nodelibs-crypto@^0.1.0",
+    "url": "github:jspm/nodelibs-url@^0.1.0",
+    "buffer": "github:jspm/nodelibs-buffer@^0.1.0",
+    "stream": "github:jspm/nodelibs-stream@^0.1.0"
+  }
+}

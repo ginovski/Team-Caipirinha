@@ -1,0 +1,1 @@
+module.exports = require("npm:negotiator@0.5.3/index");

@@ -1,0 +1,1 @@
+module.exports = require("npm:rndm@1.1.0/index");

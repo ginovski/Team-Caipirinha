@@ -1,0 +1,1 @@
+module.exports = require("npm:live-server@0.8.1/index");

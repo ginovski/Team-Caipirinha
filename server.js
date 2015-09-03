@@ -19,7 +19,7 @@ app.use(function (req, res, next) {
 });
 
 app.get('/', function(req, res, next) {
-    res.send('index.html');
+    res.sendFile(path.join(__dirname, './', 'index.html'));
 });
 
 app.listen(process.env.PORT ||5000);

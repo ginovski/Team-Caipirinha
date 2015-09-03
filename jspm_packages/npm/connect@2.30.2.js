@@ -1,0 +1,1 @@
+module.exports = require("npm:connect@2.30.2/index");

@@ -1,0 +1,1 @@
+module.exports = require("npm:open@0.0.5/lib/open");

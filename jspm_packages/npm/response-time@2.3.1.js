@@ -1,0 +1,1 @@
+module.exports = require("npm:response-time@2.3.1/index");

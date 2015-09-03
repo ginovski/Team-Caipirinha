@@ -1,0 +1,1 @@
+module.exports = require("npm:errorhandler@1.4.2/index");

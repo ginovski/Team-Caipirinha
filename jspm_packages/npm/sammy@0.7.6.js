@@ -1,0 +1,1 @@
+module.exports = require("npm:sammy@0.7.6/lib/sammy");
