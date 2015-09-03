@@ -12,7 +12,7 @@ var db = (function () {
     }
 
     function getById(dataClass, id) {
-        var query = query(dataClass);
+        var query = new Parse.Query(dataClass);
         return query.get(id);
     }
 

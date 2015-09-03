@@ -2,8 +2,8 @@ import Book from 'app/models/viewModels/bookViewModel';
 import db from 'app/models/data/db';
 
 var booksModel = (function () {
-    function add(cover, title, author, publisher, year, pages, isbn, url) {
-        var newBook = new Book(cover, title, author, publisher, year, pages, isbn, url);
+    function add(title, author,url) {
+        var newBook = new Book(title, author, url);
         db.add('Book', newBook);
     }
 
