@@ -2,9 +2,23 @@ body {
     background-color: #ffffe0;
 }
 
+#loginControls{
+    float: right;
+}
+
 #topReads{
     text-align: center;
     font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+.visible{
+    display: block;
+}
+
+.hidden{
+    display: none;
 }
 
 .navbar-brand {
