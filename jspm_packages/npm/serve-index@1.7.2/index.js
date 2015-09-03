@@ -43,7 +43,7 @@
         res.setHeader('Allow', 'GET, HEAD, OPTIONS');
         res.setHeader('Content-Length', '0');
         res.end();
-        return ;
+        return;
       }
       var url = parseUrl(req);
       var originalUrl = parseUrl.original(req);

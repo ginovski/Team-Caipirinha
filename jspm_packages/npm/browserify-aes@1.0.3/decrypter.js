@@ -83,7 +83,7 @@
       }
     }
     if (padded === 16) {
-      return ;
+      return;
     }
     return last.slice(0, 16 - padded);
   }

@@ -83,7 +83,7 @@
           arraySet: function(dest, src, src_offs, len, dest_offs) {
             if (src.subarray && dest.subarray) {
               dest.set(src.subarray(src_offs, src_offs + len), dest_offs);
-              return ;
+              return;
             }
             for (var i = 0; i < len; i++) {
               dest[dest_offs + i] = src[src_offs + i];
@@ -595,7 +595,7 @@
           strm.avail_out = (_out < end ? 257 + (end - _out) : 257 - (_out - end));
           state.hold = hold;
           state.bits = bits;
-          return ;
+          return;
         };
       }, {}],
       8: [function(require, module, exports) {

@@ -63,10 +63,10 @@
     },
     _sendHandshakeBody: function() {
       if (!this._started)
-        return ;
+        return;
       var signature = this._handshakeSignature();
       if (!signature)
-        return ;
+        return;
       this._write(signature);
       this._stage = 0;
       this._open();

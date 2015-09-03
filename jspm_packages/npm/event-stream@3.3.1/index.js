@@ -32,7 +32,7 @@
       var ended = false;
       e.on('end', function() {
         if (ended)
-          return ;
+          return;
         ended = true;
         endCount++;
         if (endCount == toMerge.length)
@@ -68,7 +68,7 @@
     a.destroy = function() {
       a.writable = a.readable = false;
       if (isDone)
-        return ;
+        return;
       done(new Error('destroyed before end'), array);
     };
     return a;
@@ -84,7 +84,7 @@
       throw new Error('event-stream.read expects an array');
     stream.resume = function() {
       if (ended)
-        return ;
+        return;
       paused = false;
       var l = array.length;
       while (i < l && !paused && !ended) {
@@ -125,7 +125,7 @@
         stream.emit('data', data);
       immediately(function() {
         if (ended || paused || reading)
-          return ;
+          return;
         try {
           reading = true;
           func.call(stream, i++, function() {

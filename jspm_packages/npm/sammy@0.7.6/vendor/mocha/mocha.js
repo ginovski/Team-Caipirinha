@@ -555,7 +555,7 @@
             },
             failures = this.failures = [];
         if (!runner)
-          return ;
+          return;
         this.runner = runner;
         runner.on('start', function() {
           stats.start = new Date;
@@ -594,7 +594,7 @@
           console.error(fmt, stats.failures, this.runner.total);
           Base.list(this.failures);
           console.error();
-          return ;
+          return;
         }
         fmt = color('bright pass', '  ✔') + color('green', ' %d tests complete') + color('light', ' (%dms)');
         console.log(fmt, stats.tests || 0, stats.duration);
@@ -634,7 +634,7 @@
         }
         runner.on('suite', function(suite) {
           if (suite.root)
-            return ;
+            return;
           ++indents;
           console.log('%s<section class="suite">', indent());
           ++indents;
@@ -643,7 +643,7 @@
         });
         runner.on('suite end', function(suite) {
           if (suite.root)
-            return ;
+            return;
           console.log('%s</dl>', indent());
           --indents;
           console.log('%s</section>', indent());
@@ -762,7 +762,7 @@
           progress.size(40);
         runner.on('suite', function(suite) {
           if (suite.root)
-            return ;
+            return;
           var el = fragment('<div class="suite"><h1>%s</h1></div>', suite.title);
           stack[0].appendChild(el);
           stack.unshift(document.createElement('div'));
@@ -770,7 +770,7 @@
         });
         runner.on('suite end', function(suite) {
           if (suite.root)
-            return ;
+            return;
           stack.shift();
         });
         runner.on('fail', function(test, err) {
@@ -898,7 +898,7 @@
           result.failures = failures.map(clean);
           result.passes = passes.map(clean);
           if (!output)
-            return ;
+            return;
           process.stdout.write(JSON.stringify(result, null, 2));
         });
       }
@@ -1482,13 +1482,13 @@
         }
         function multiple() {
           if (emitted)
-            return ;
+            return;
           emitted = true;
           self.emit('error', new Error('done() called multiple times'));
         }
         function done(err) {
           if (self.timedOut)
-            return ;
+            return;
           if (finished)
             return multiple();
           self.clearTimeout();
@@ -1509,7 +1509,7 @@
           } catch (err) {
             done(err);
           }
-          return ;
+          return;
         }
         try {
           if (!this.pending)
@@ -1561,7 +1561,7 @@
       };
       Runner.prototype.checkGlobals = function(test) {
         if (this.ignoreLeaks)
-          return ;
+          return;
         var leaks = utils.filter(utils.keys(global), function(key) {
           return !~utils.indexOf(this._globals, key) && (!global.navigator || 'onerror' !== key);
         }, this);
@@ -1717,14 +1717,14 @@
         debug('uncaught exception');
         var runnable = this.currentRunnable;
         if ('failed' == runnable.state)
-          return ;
+          return;
         runnable.clearTimeout();
         err.uncaught = true;
         this.fail(runnable, err);
         if ('test' == runnable.type) {
           this.emit('test end', runnable);
           this.hookUp('afterEach', this.next);
-          return ;
+          return;
         }
         this.emit('end');
       };

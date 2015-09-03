@@ -50,7 +50,7 @@
   };
   exports.removeContentHeaders = function(res) {
     if (!res._headers)
-      return ;
+      return;
     Object.keys(res._headers).forEach(function(field) {
       if (0 == field.indexOf('content')) {
         res.removeHeader(field);

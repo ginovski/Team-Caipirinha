@@ -20,7 +20,7 @@
       url = host + '/updateReports?agent=' + agent;
       socket = new WebSocket.Client(url);
       socket.onclose = process.exit;
-      return ;
+      return;
     }
     url = host + '/runCase?case=' + n + '&agent=' + agent;
     socket = new WebSocket.Client(url, [], options);

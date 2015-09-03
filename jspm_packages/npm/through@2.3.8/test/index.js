@@ -68,7 +68,7 @@
     var s = spec(t).through().pausable();
     t.on('data', function() {
       if (Math.random() > 0.1)
-        return ;
+        return;
       t.pause();
       process.nextTick(function() {
         t.resume();

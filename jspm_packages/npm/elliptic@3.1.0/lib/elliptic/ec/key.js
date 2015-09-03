@@ -92,7 +92,7 @@ KeyPair.prototype._importPrivate = function _importPrivate(key, enc) {
 KeyPair.prototype._importPublic = function _importPublic(key, enc) {
   if (key.x || key.y) {
     this.pub = this.ec.curve.point(key.x, key.y);
-    return ;
+    return;
   }
   key = utils.toArray(key, enc);
   if (this.ec.curve.type !== 'mont')

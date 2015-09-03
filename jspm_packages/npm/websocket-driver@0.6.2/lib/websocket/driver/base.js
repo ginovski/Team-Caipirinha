@@ -47,7 +47,7 @@
       this.on('close', function() {
         var messages = self.messages;
         if (!messages.readable)
-          return ;
+          return;
         messages.readable = messages.writable = false;
         messages.emit('end');
       });

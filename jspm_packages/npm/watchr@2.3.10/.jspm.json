@@ -78,6 +78,6 @@
     "bal-util": "bal-util@~1.18.0",
     "path": "github:jspm/nodelibs-path@^0.1.0",
     "fs": "github:jspm/nodelibs-fs@^0.1.0",
-    "events": "github:jspm/nodelibs-events@^0.1.0"
+    "events": "github:jspm/nodelibs-events@^0.1.1"
   }
 }

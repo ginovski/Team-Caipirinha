@@ -2,7 +2,7 @@
 "format cjs";
 (function (factory) {
   if (typeof define === 'function' && define.amd) {
-    define(["jquery","sammy","jquery.tmpl"], factory);
+    define(['jquery', 'sammy', 'jquery.tmpl'], factory);
   } else {
     (window.Sammy = window.Sammy || {}).Tmpl = factory(window.jQuery, window.Sammy);
   }

@@ -6,7 +6,8 @@
   "files": [
     "LICENSE",
     "README.md",
-    "index.js"
+    "index.js",
+    "package.json"
   ],
   "scripts": {
     "test": "istanbul cover tape test.js",

@@ -15,7 +15,8 @@
   "files": [
     "LICENSE",
     "Readme.md",
-    "index.js"
+    "index.js",
+    "package.json"
   ],
   "gitHead": "2477a23ae56f75e0a5622a20b5b55da00de3a23b",
   "bugs": {

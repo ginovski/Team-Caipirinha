@@ -18,7 +18,7 @@
   function pause(stream) {
     stream.on('data', function() {
       if (Math.random() > 0.1)
-        return ;
+        return;
       stream.pause();
       process.nextTick(function() {
         stream.resume();

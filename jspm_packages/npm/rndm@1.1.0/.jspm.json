@@ -29,7 +29,8 @@
     "id"
   ],
   "files": [
-    "index.js"
+    "index.js",
+    "package.json"
   ],
   "gitHead": "8f4ae42f705a08a2add41fa5bdaee9bcd48d9d49",
   "bugs": {

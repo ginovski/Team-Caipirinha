@@ -8,7 +8,7 @@
   };
   StreamReader.prototype.put = function(buffer) {
     if (!buffer || buffer.length === 0)
-      return ;
+      return;
     if (!buffer.copy)
       buffer = new Buffer(buffer);
     this._queue.push(buffer);

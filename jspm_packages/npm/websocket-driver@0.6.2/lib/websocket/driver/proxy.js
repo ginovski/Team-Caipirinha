@@ -73,7 +73,7 @@
     },
     end: function(chunk) {
       if (!this.writable)
-        return ;
+        return;
       if (chunk !== undefined)
         this.write(chunk);
       this.readable = this.writable = false;

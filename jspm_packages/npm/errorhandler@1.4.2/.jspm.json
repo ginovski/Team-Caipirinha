@@ -28,7 +28,8 @@
     "public/",
     "LICENSE",
     "HISTORY.md",
-    "index.js"
+    "index.js",
+    "package.json"
   ],
   "engines": {
     "node": ">= 0.8"

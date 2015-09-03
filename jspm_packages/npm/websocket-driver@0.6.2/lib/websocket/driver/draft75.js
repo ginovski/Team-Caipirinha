@@ -23,7 +23,7 @@
     },
     parse: function(chunk) {
       if (this.readyState > 1)
-        return ;
+        return;
       this._reader.put(chunk);
       this._reader.eachByte(function(octet) {
         var message;

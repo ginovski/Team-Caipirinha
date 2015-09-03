@@ -42,7 +42,7 @@
     }
     function next(err, data, number) {
       if (destroyed)
-        return ;
+        return;
       inNext = true;
       if (!err || self.opts.failures) {
         queueData(data, number);
@@ -84,7 +84,7 @@
     }
     stream.end = function(data) {
       if (ended)
-        return ;
+        return;
       end();
     };
     stream.destroy = function() {

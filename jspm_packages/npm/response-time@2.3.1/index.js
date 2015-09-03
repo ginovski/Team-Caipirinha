@@ -26,7 +26,7 @@
     var suffix = options.suffix !== undefined ? Boolean(options.suffix) : true;
     return function setResponseHeader(req, res, time) {
       if (res.getHeader(header)) {
-        return ;
+        return;
       }
       var val = time.toFixed(digits);
       if (suffix) {

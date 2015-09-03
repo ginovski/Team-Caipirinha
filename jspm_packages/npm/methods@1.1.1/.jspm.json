@@ -30,7 +30,8 @@
   "files": [
     "index.js",
     "HISTORY.md",
-    "LICENSE"
+    "LICENSE",
+    "package.json"
   ],
   "engines": {
     "node": ">= 0.6"

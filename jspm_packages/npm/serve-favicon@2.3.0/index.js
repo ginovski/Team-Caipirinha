@@ -33,14 +33,14 @@
     return function favicon(req, res, next) {
       if (parseUrl(req).pathname !== '/favicon.ico') {
         next();
-        return ;
+        return;
       }
       if (req.method !== 'GET' && req.method !== 'HEAD') {
         res.statusCode = req.method === 'OPTIONS' ? 200 : 405;
         res.setHeader('Allow', 'GET, HEAD, OPTIONS');
         res.setHeader('Content-Length', '0');
         res.end();
-        return ;
+        return;
       }
       if (icon)
         return send(req, res, icon);
@@ -84,7 +84,7 @@
     if (fresh(req.headers, res._headers)) {
       res.statusCode = 304;
       res.end();
-      return ;
+      return;
     }
     res.statusCode = 200;
     res.setHeader('Content-Length', icon.body.length);

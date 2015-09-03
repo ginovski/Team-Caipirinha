@@ -146,7 +146,7 @@
       }
     }
     if (overflow === 0) {
-      return ;
+      return;
     }
     do {
       bits = max_length - 1;

@@ -141,7 +141,7 @@
         change: function(eventName, filePath, fileCurrentStat, filePreviousStat) {
           clients.forEach(function(ws) {
             if (!ws)
-              return ;
+              return;
             if (path.extname(filePath) == ".css") {
               ws.send('refreshcss');
               if (logLevel >= 1)

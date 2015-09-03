@@ -146,7 +146,7 @@
     Socket.prototype.destroy = function(exception) {
       debug('destroy', exception);
       if (this.destroyed) {
-        return ;
+        return;
       }
       self._connecting = false;
       this.readable = this.writable = false;
@@ -170,7 +170,7 @@
         this.once('connect', function() {
           this._write(data, encoding, cb);
         });
-        return ;
+        return;
       }
       this._pendingData = null;
       this._pendingEncoding = '';
@@ -226,7 +226,7 @@
           if (data.error) {
             self.emit('error', 'Cannot open TCP connection [' + res.statusCode + ']: ' + data.error);
             self.destroy();
-            return ;
+            return;
           }
           self.remoteAddress = data.remote.address;
           self.remoteFamily = data.remote.family;
@@ -234,7 +234,7 @@
           self._connectWebSocket(data.token, function(err) {
             if (err) {
               cb(err);
-              return ;
+              return;
             }
             cb();
           });
@@ -251,7 +251,7 @@
         process.nextTick(function() {
           cb();
         });
-        return ;
+        return;
       }
       this._ws = new WebSocket('ws://' + getProxyHost() + '/api/vm/net/socket?token=' + token);
       this._handleWebsocket();

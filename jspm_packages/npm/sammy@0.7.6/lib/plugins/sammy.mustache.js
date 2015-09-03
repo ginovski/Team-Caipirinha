@@ -2,7 +2,7 @@
 "format cjs";
 (function (factory) {
   if (typeof define === 'function' && define.amd) {
-    define(["jquery","sammy","mustache"], factory);
+    define(['jquery', 'sammy', 'mustache'], factory);
   } else {
     (window.Sammy = window.Sammy || {}).Mustache = factory(window.jQuery, window.Sammy, window.Mustache);
   }

@@ -62,7 +62,7 @@
   ],
   "registry": "npm",
   "dependencies": {
-    "systemjs-json": "github:systemjs/plugin-json@^0.1.0",
-    "buffer": "github:jspm/nodelibs-buffer@^0.1.0"
+    "buffer": "github:jspm/nodelibs-buffer@^0.1.0",
+    "systemjs-json": "github:systemjs/plugin-json@^0.1.0"
   }
 }

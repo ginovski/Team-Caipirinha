@@ -20,7 +20,8 @@
   "files": [
     "index.js",
     "codes.json",
-    "LICENSE"
+    "LICENSE",
+    "package.json"
   ],
   "devDependencies": {
     "csv-parse": "0.0.6",

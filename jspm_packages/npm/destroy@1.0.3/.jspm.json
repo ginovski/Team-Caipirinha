@@ -28,7 +28,8 @@
     "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter dot"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "package.json"
   ],
   "keywords": [
     "stream",

@@ -10,7 +10,7 @@
         cache = {};
     function processTextContent(text) {
       if (destroyed) {
-        return ;
+        return;
       }
       var numTextBoxes = util.countInStr(text, '<div');
       if (numTextBoxes > MAX_TEXT_BOXES) {

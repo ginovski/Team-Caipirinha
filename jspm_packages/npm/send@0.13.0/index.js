@@ -167,11 +167,11 @@
   SendStream.prototype.redirect = function redirect(path) {
     if (listenerCount(this, 'directory') !== 0) {
       this.emit('directory');
-      return ;
+      return;
     }
     if (this.hasTrailingSlash()) {
       this.error(403);
-      return ;
+      return;
     }
     var loc = path + '/';
     var msg = 'Redirecting to <a href="' + escapeHtml(loc) + '">' + escapeHtml(loc) + '</a>\n';
@@ -352,7 +352,7 @@
     });
     stream.on('error', function onerror(err) {
       if (finished)
-        return ;
+        return;
       finished = true;
       destroy(stream);
       self.onStatError(err);
@@ -364,7 +364,7 @@
   SendStream.prototype.type = function(path) {
     var res = this.res;
     if (res.getHeader('Content-Type'))
-      return ;
+      return;
     var type = mime.lookup(path);
     var charset = mime.charsets.lookup(type);
     debug('content-type %s', type);

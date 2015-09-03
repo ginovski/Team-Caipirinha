@@ -89,7 +89,7 @@
   function log(message, site) {
     var haslisteners = eventListenerCount(process, 'deprecation') !== 0;
     if (!haslisteners && this._ignored) {
-      return ;
+      return;
     }
     var caller;
     var callFile;
@@ -120,7 +120,7 @@
     }
     var key = caller ? site.join(':') + '__' + caller.join(':') : undefined;
     if (key !== undefined && key in this._warned) {
-      return ;
+      return;
     }
     this._warned[key] = true;
     if (!message) {
@@ -129,12 +129,12 @@
     if (haslisteners) {
       var err = DeprecationError(this._namespace, message, stack.slice(i));
       process.emit('deprecation', err);
-      return ;
+      return;
     }
     var format = process.stderr.isTTY ? formatColor : formatPlain;
     var msg = format.call(this, message, caller, stack.slice(i));
     process.stderr.write(msg + '\n', 'utf8');
-    return ;
+    return;
   }
   function callSiteLocation(callSite) {
     var file = callSite.getFileName() || '<anonymous>';

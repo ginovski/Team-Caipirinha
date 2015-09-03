@@ -28,7 +28,8 @@
   "files": [
     "LICENSE",
     "HISTORY.md",
-    "index.js"
+    "index.js",
+    "package.json"
   ],
   "scripts": {
     "test": "mocha --reporter spec --check-leaks --bail test/",

@@ -55,7 +55,7 @@ function duplex(writer, reader) {
   }
   function handleEnd() {
     if (ended) {
-      return ;
+      return;
     }
     ended = true;
     var args = slice.call(arguments);

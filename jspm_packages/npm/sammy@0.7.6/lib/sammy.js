@@ -9,7 +9,7 @@
   // Support module loading scenarios
   if (typeof define === 'function' && define.amd){
     // AMD Anonymous Module
-    define(["jquery"], factory);
+    define(['jquery'], factory);
   } else {
     // No module loader (plain <script> tag) - put directly in global namespace
     jQuery.sammy = window.Sammy = factory(jQuery);

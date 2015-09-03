@@ -35,7 +35,7 @@
       self.statusCode = statusCode;
       self.url = pathname;
       if (!headers)
-        return ;
+        return;
       for (var i = 0,
           n = headers.length,
           key,

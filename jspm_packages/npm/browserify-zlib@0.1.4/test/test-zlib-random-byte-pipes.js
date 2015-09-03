@@ -33,15 +33,15 @@
   };
   RandomReadStream.prototype._process = function() {
     if (this._processing)
-      return ;
+      return;
     if (this._paused)
-      return ;
+      return;
     this._processing = true;
     if (!this._remaining) {
       this._hash = this._hasher.digest('hex').toLowerCase().trim();
       this._processing = false;
       this.emit('end');
-      return ;
+      return;
     }
     var block = this._opt.block;
     var jitter = this._opt.jitter;

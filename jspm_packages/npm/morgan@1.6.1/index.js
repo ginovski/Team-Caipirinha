@@ -43,12 +43,12 @@
       function logRequest() {
         if (skip !== false && skip(req, res)) {
           debug('skip request');
-          return ;
+          return;
         }
         var line = formatLine(morgan, req, res);
         if (null == line) {
           debug('skip line');
-          return ;
+          return;
         }
         debug('log request');
         stream.write(line + '\n');
@@ -86,7 +86,7 @@
   });
   morgan.token('response-time', function getResponseTimeToken(req, res) {
     if (!req._startAt || !res._startAt) {
-      return ;
+      return;
     }
     var ms = (res._startAt[0] - req._startAt[0]) * 1e3 + (res._startAt[1] - req._startAt[1]) * 1e-6;
     return ms.toFixed(3);

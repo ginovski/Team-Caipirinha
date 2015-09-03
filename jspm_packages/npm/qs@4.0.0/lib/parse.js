@@ -58,7 +58,7 @@ internals.parseObject = function(chain, val, options) {
 };
 internals.parseKeys = function(key, val, options) {
   if (!key) {
-    return ;
+    return;
   }
   if (options.allowDots) {
     key = key.replace(/\.([^\.\[]+)/g, '[$1]');
@@ -70,7 +70,7 @@ internals.parseKeys = function(key, val, options) {
   if (segment[1]) {
     if (!options.plainObjects && Object.prototype.hasOwnProperty(segment[1])) {
       if (!options.allowPrototypes) {
-        return ;
+        return;
       }
     }
     keys.push(segment[1]);

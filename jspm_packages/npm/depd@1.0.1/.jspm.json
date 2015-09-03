@@ -26,7 +26,8 @@
     "History.md",
     "LICENSE",
     "index.js",
-    "Readme.md"
+    "Readme.md",
+    "package.json"
   ],
   "engines": {
     "node": ">= 0.6"
@@ -67,7 +68,7 @@
   "registry": "npm",
   "dependencies": {
     "buffer": "github:jspm/nodelibs-buffer@^0.1.0",
-    "events": "github:jspm/nodelibs-events@^0.1.0",
+    "events": "github:jspm/nodelibs-events@^0.1.1",
     "path": "github:jspm/nodelibs-path@^0.1.0",
     "process": "github:jspm/nodelibs-process@^0.1.0"
   }

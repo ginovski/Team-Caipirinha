@@ -73,21 +73,21 @@
       onHeaders(res, function() {
         if (!filter(req, res)) {
           nocompress('filtered');
-          return ;
+          return;
         }
         vary(res, 'Accept-Encoding');
         if (Number(res.getHeader('Content-Length')) < threshold || length < threshold) {
           nocompress('size below threshold');
-          return ;
+          return;
         }
         var encoding = res.getHeader('Content-Encoding') || 'identity';
         if ('identity' !== encoding) {
           nocompress('already encoded');
-          return ;
+          return;
         }
         if ('HEAD' === req.method) {
           nocompress('HEAD request');
-          return ;
+          return;
         }
         var accept = accepts(req);
         var method = accept.encoding(['gzip', 'deflate', 'identity']);
@@ -96,7 +96,7 @@
         }
         if (!method || method === 'identity') {
           nocompress('not acceptable');
-          return ;
+          return;
         }
         debug('%s compression', method);
         stream = method === 'gzip' ? zlib.createGzip(opts) : zlib.createDeflate(opts);

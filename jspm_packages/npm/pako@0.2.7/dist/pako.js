@@ -376,7 +376,7 @@
           arraySet: function(dest, src, src_offs, len, dest_offs) {
             if (src.subarray && dest.subarray) {
               dest.set(src.subarray(src_offs, src_offs + len), dest_offs);
-              return ;
+              return;
             }
             for (var i = 0; i < len; i++) {
               dest[dest_offs + i] = src[src_offs + i];
@@ -723,7 +723,7 @@
             len = strm.avail_out;
           }
           if (len === 0) {
-            return ;
+            return;
           }
           utils.arraySet(strm.output, s.pending_buf, s.pending_out, len, strm.next_out);
           strm.next_out += len;
@@ -1853,7 +1853,7 @@
           strm.avail_out = (_out < end ? 257 + (end - _out) : 257 - (_out - end));
           state.hold = hold;
           state.bits = bits;
-          return ;
+          return;
         };
       }, {}],
       11: [function(require, module, exports) {
@@ -3381,7 +3381,7 @@
             }
           }
           if (overflow === 0) {
-            return ;
+            return;
           }
           do {
             bits = max_length - 1;

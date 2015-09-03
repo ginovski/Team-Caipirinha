@@ -367,7 +367,7 @@
           match = block.check_indent.exec(line);
           if (match) {
             block.contents.push(match[1] || "");
-            return ;
+            return;
           } else {
             output.push(block.process());
             block = false;
@@ -458,7 +458,7 @@
         if (!part) {
           flush();
           new_js.push(line);
-          return ;
+          return;
         }
         end = part[2] || "";
         part = part[1];

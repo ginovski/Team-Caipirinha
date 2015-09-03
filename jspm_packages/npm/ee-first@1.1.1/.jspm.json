@@ -24,7 +24,8 @@
   },
   "files": [
     "index.js",
-    "LICENSE"
+    "LICENSE",
+    "package.json"
   ],
   "scripts": {
     "test": "mocha --reporter spec --bail --check-leaks test/",

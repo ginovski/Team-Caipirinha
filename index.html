@@ -6,25 +6,29 @@
     <title>E-Library</title>
     <link rel="stylesheet" href="jspm_packages/github/twbs/bootstrap@3.3.5/css/bootstrap.css"/>
     <link rel="stylesheet" href="app/assets/styles/main.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
 <body>
 <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '611224062350352',
-      xfbml      : true,
-      version    : 'v2.4'
-    });
-  };
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '611224062350352',
+            xfbml: true,
+            version: 'v2.4'
+        });
+    };
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
 </script>
 <div id="container">
     <div class="row">
@@ -58,7 +62,7 @@
                                 <button type="submit" class="btn btn-default"><span
                                         class="glyphicon glyphicon-search"></span></button>
                             </form>
-                            <div  id="loginControls">
+                            <div id="loginControls">
                                 <ul class="list-inline">
                                     <li><a href="#/register" class="btn btn-primary btn-sm">Sign up</a></li>
                                     <li><a href="#/login" class="btn btn-primary btn-sm">Sign in</a></li>
@@ -70,7 +74,9 @@
             </div>
             <div class="jumbotron text-center">
                 <h1>E-library by team Caipirinha</h1>
-                <div class="fb-like" data-href="http://127.0.0.1:8080/#/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+
+                <div class="fb-like" data-href="http://127.0.0.1:8080/#/" data-layout="standard" data-action="like"
+                     data-show-faces="true" data-share="true"></div>
                 <p class="lead"></p>
             </div>
 
@@ -124,18 +130,16 @@
 
     <footer>
         <div class="footerText">Designed and developed by:</div>
-        <div class="footerLinks pull-left">
-            <ul>
-                <li><a href="https://github.com/ginovski" target="_blank">Alexandar Ginovski</a></li>
-                <li><a href="https://github.com/Spurch" target="_blank">Ivan Nikolov</a></li>
-                <li><a href="https://github.com/YaneYosifov" target="_blank">Yane Yosifov</a></li>
-                <li><a href="https://github.com/BiserSirakov" target="_blank">Biser Sirakov</a></li>
-                <li><a href="https://github.com/IvanRPanchev" target="_blank">Ivan Panchev</a></li>
-            </ul>
+
+        <div class="footerLinks">
+            <a href="https://github.com/ginovski" target="_blank"><i class="fa fa-github"></i> Alexandar Ginovski</a>
+            <a href="https://github.com/Spurch" target="_blank"><i class="fa fa-github"></i> Ivan Nikolov</a>
+            <a href="https://github.com/YaneYosifov" target="_blank"><i class="fa fa-github"></i> Yane Yosifov</a>
+            <a href="https://github.com/BiserSirakov" target="_blank"><i class="fa fa-github"></i> Biser Sirakov</a>
+            <a href="https://github.com/IvanRPanchev" target="_blank"><i class="fa fa-github"></i> Ivan Panchev</a>
         </div>
     </footer>
 
-    <div class="clearfix"></div>
 
 </div>
 

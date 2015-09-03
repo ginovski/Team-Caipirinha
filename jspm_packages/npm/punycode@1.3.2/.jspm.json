@@ -37,7 +37,8 @@
   },
   "files": [
     "LICENSE-MIT.txt",
-    "punycode.js"
+    "punycode.js",
+    "package.json"
   ],
   "scripts": {
     "test": "node tests/tests.js"

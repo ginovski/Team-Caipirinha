@@ -366,7 +366,7 @@
             if (handlers instanceof Array) {
               if (!handler) {
                 handlers.length = 0;
-                return ;
+                return;
               }
               for (i = 0, len = handlers.length; i < len; i++) {
                 if (handlers[i] === handler || handlers[i].handler === handler) {
@@ -610,7 +610,7 @@
         }
         function processSVGContent(text) {
           if (destroyed) {
-            return ;
+            return;
           }
           var query = config.queryString.replace('&', '&#38;'),
               dataUrlCount;
@@ -661,7 +661,7 @@
             cache = {};
         function processTextContent(text) {
           if (destroyed) {
-            return ;
+            return;
           }
           var numTextBoxes = util.countInStr(text, '<div');
           if (numTextBoxes > MAX_TEXT_BOXES) {
@@ -792,7 +792,7 @@
                 status = req.status;
               } catch (e) {
                 fail(req);
-                return ;
+                return;
               }
               if (status === 0 && isRequestToLocalFile(url)) {
                 status = 200;
@@ -889,7 +889,7 @@
                       retryAfter = parseInt(req.getResponseHeader('retry-after'));
                       if (retryAfter > 0) {
                         setTimeout(request, retryAfter * 1000);
-                        return ;
+                        return;
                       }
                     }
                     if (this.responseText) {
@@ -1970,10 +1970,10 @@
               } else if (val === Crocodoc.SCROLL_NEXT && state.currentPage < this.numPages) {
                 pageNum = this.calculateNextPage();
               } else if (!pageNum) {
-                return ;
+                return;
               }
             } else if (!pageNum && pageNum !== 0) {
-              return ;
+              return;
             }
             pageNum = util.clamp(pageNum, 1, this.numPages);
             this.scrollToPage(pageNum);
@@ -2709,7 +2709,7 @@
           },
           handlePageAvailable: function(data) {
             if (!ready) {
-              return ;
+              return;
             }
             var i;
             if (data.all === true) {
@@ -2726,7 +2726,7 @@
           handlePageFocus: function(data) {
             this.updateLayoutState(data);
             if (!ready) {
-              return ;
+              return;
             }
             this.cancelAllLoading();
             pagefocusTriggerLoadingTID = setTimeout(function() {
@@ -2735,7 +2735,7 @@
           },
           handleBeforeZoom: function(data) {
             if (!ready) {
-              return ;
+              return;
             }
             this.cancelAllLoading();
             this.unloadUnnecessaryPages(data.visiblePages.length * 2);
@@ -2743,7 +2743,7 @@
           handleZoom: function(data) {
             this.updateLayoutState(data);
             if (!ready) {
-              return ;
+              return;
             }
             this.loadNecessaryPages();
           },
@@ -2752,7 +2752,7 @@
           },
           handleScrollEnd: function() {
             if (!ready) {
-              return ;
+              return;
             }
             this.loadNecessaryPages();
             this.unloadUnnecessaryPages(pageLoadRange);
@@ -2838,7 +2838,7 @@
               attr.href = encodeURI(link.uri);
               attr.target = '_blank';
             } else {
-              return ;
+              return;
             }
           } else if (link.destination) {
             attr.href = '#page-' + link.destination.pagenum;
@@ -2981,7 +2981,7 @@
                   this.loadSVG(svgText);
                 };
               }
-              return ;
+              return;
             case EMBED_STRATEGY_DATA_URL:
               domParser = new DOMParser();
               svgDoc = domParser.parseFromString(svgText, SVG_MIME_TYPE);
@@ -3104,7 +3104,7 @@
           var doc,
               textEl;
           if (!text || loaded || destroyed) {
-            return ;
+            return;
           }
           loaded = true;
           doc = document.implementation.createHTMLDocument('');
@@ -3349,7 +3349,7 @@
               frameWidth = window.innerWidth;
               fixElementPosition();
               scope.broadcast('layoutchange');
-              return ;
+              return;
             }
           }
           if (newOffsetHeight) {
@@ -3450,7 +3450,7 @@
           }
           if (new Date().getTime() - ghostScrollStart > GHOST_SCROLL_TIMEOUT) {
             handleScrollEnd();
-            return ;
+            return;
           }
           fireScroll();
           scrollendTID = setTimeout(ghostScroll, GHOST_SCROLL_INTERVAL);
@@ -3696,7 +3696,7 @@
                 $pageOneContentPromise,
                 $pageOneTextPromise;
             if ($assetsPromise) {
-              return ;
+              return;
             }
             $loadMetadataPromise = scope.get('metadata');
             $loadMetadataPromise.then(function handleMetadataResponse(metadata) {

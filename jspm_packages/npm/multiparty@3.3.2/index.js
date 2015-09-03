@@ -76,13 +76,13 @@
       self.autoFiles = true;
       var end = function(done) {
         if (called)
-          return ;
+          return;
         called = true;
         process.nextTick(function() {
           if (waitend && req.readable) {
             req.resume();
             req.once('end', done);
-            return ;
+            return;
           }
           done();
         });
@@ -119,17 +119,17 @@
     var state = req._readableState;
     if (req._decoder || (state && (state.encoding || state.decoder))) {
       validationError(new Error('request encoding must not be set'));
-      return ;
+      return;
     }
     var contentType = req.headers['content-type'];
     if (!contentType) {
       validationError(new Error('missing content-type header'));
-      return ;
+      return;
     }
     var m = CONTENT_TYPE_RE.exec(contentType);
     if (!m) {
       validationError(new Error('unrecognized content-type: ' + contentType));
-      return ;
+      return;
     }
     var boundary;
     CONTENT_TYPE_PARAM_RE.lastIndex = m.index + m[0].length - 1;
@@ -141,7 +141,7 @@
     }
     if (!boundary) {
       validationError(new Error('content-type missing boundary: ' + require("util").inspect(m)));
-      return ;
+      return;
     }
     setUpParser(self, boundary);
     req.pipe(self);
@@ -174,7 +174,7 @@
   };
   Form.prototype._write = function(buffer, encoding, cb) {
     if (this.error)
-      return ;
+      return;
     var self = this,
         i = 0,
         len = buffer.length,
@@ -234,7 +234,7 @@
           if (c === COLON) {
             if (index === 1) {
               self.handleError(new Error("Empty header field"));
-              return ;
+              return;
             }
             self.onParseHeaderField(buffer.slice(self.headerFieldMark, i));
             self.headerFieldMark = null;
@@ -244,7 +244,7 @@
           cl = lower(c);
           if (cl < A || cl > Z) {
             self.handleError(new Error("Expected alphabetic character, received " + c));
-            return ;
+            return;
           }
           break;
         case HEADER_VALUE_START:
@@ -345,7 +345,7 @@
           break;
         default:
           self.handleError(new Error("Parser has invalid state."));
-          return ;
+          return;
       }
     }
     if (self.headerFieldMark != null) {
@@ -483,7 +483,7 @@
   }
   function destroyFile(self, file) {
     if (!file.ws)
-      return ;
+      return;
     file.ws.removeAllListeners('close');
     file.ws.on('close', function() {
       fs.unlink(file.path, function(err) {
@@ -495,7 +495,7 @@
   }
   function handleFile(self, fileStream) {
     if (self.error)
-      return ;
+      return;
     var file = {
       fieldName: fileStream.name,
       originalFilename: fileStream.filename,
@@ -555,11 +555,11 @@
     fieldStream.on('readable', function() {
       var buffer = fieldStream.read();
       if (!buffer)
-        return ;
+        return;
       self.totalFieldSize += buffer.length;
       if (self.totalFieldSize > self.maxFieldsSize) {
         self.handleError(new Error("maxFieldsSize " + self.maxFieldsSize + " exceeded"));
-        return ;
+        return;
       }
       value += decoder.write(buffer);
     });
@@ -613,7 +613,7 @@
       if (m) {
         m[1] = decodeURI(m[1]);
       } else {
-        return ;
+        return;
       }
     }
     var filename = m[1].substr(m[1].lastIndexOf('\\') + 1);

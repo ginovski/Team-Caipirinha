@@ -262,11 +262,11 @@
                   balUtil.each(_this.children, function(childFileWatcher, childFileRelativePath) {
                     var childFileFullPath;
                     if (__indexOf.call(newFileRelativePaths, childFileRelativePath) >= 0) {
-                      return ;
+                      return;
                     }
                     childFileFullPath = pathUtil.join(fileFullPath, childFileRelativePath);
                     if (_this.isIgnoredPath(childFileFullPath)) {
-                      return ;
+                      return;
                     }
                     _this.log('debug', 'determined delete:', childFileFullPath, 'via:', fileFullPath);
                     return _this.closeChild(childFileRelativePath, 'deleted');
@@ -274,12 +274,12 @@
                   return balUtil.each(newFileRelativePaths, function(childFileRelativePath) {
                     var childFileFullPath;
                     if (_this.children[childFileRelativePath] != null) {
-                      return ;
+                      return;
                     }
                     _this.children[childFileRelativePath] = false;
                     childFileFullPath = pathUtil.join(fileFullPath, childFileRelativePath);
                     if (_this.isIgnoredPath(childFileFullPath)) {
-                      return ;
+                      return;
                     }
                     return balUtil.stat(childFileFullPath, function(err, childFileStat) {
                       if (err) {
@@ -581,7 +581,7 @@
       if (typeof next === "function") {
         next(null, null);
       }
-      return ;
+      return;
     }
     if (watchers[path] != null) {
       watcher = watchers[path];

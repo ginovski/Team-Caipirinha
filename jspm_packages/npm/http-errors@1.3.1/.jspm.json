@@ -42,7 +42,8 @@
     "index.js",
     "HISTORY.md",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "package.json"
   ],
   "gitHead": "89a8502b40d5dd42da2908f265275e2eeb8d0699",
   "bugs": {

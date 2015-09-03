@@ -70,7 +70,7 @@
           name = config.currentModule + " module: " + name;
         }
         if (!validTest(name)) {
-          return ;
+          return;
         }
         synchronize(function() {
           QUnit.testStart(testName);
@@ -384,7 +384,7 @@
             synchronize(done);
           }
         }, 13);
-        return ;
+        return;
       }
       config.autorun = true;
       if (config.currentModule) {

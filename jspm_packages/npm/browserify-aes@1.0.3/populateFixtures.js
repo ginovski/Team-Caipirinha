@@ -14,7 +14,7 @@
       buf = Buffer.concat([buf, suite.final()]);
       fixture.results.ciphers[cipher] = buf.toString('hex');
       if (modes[cipher].mode === 'ECB') {
-        return ;
+        return;
       }
       var suite2 = crypto.createCipheriv(cipher, ebtk(crypto, fixture.password, modes[cipher].key).key, new Buffer(fixture.iv, 'hex'));
       var buf2 = new Buffer('');

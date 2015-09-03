@@ -26,7 +26,8 @@
     "HISTORY.md",
     "LICENSE",
     "README.md",
-    "index.js"
+    "index.js",
+    "package.json"
   ],
   "engines": {
     "node": ">= 0.6"

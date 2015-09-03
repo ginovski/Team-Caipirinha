@@ -24,7 +24,7 @@
         headers.set(key, options.headers[key]);
     }
     if (!this._stream || !this._stream.writable)
-      return ;
+      return;
     process.nextTick(function() {
       self._open();
     });
@@ -66,7 +66,7 @@
     },
     _open: function() {
       if (this.readyState !== API.CONNECTING)
-        return ;
+        return;
       this.readyState = API.OPEN;
       var event = new Event('open');
       event.initEvent('open', false, false);

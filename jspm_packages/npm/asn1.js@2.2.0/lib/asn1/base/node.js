@@ -315,12 +315,12 @@ Node.prototype._createEncoderBuffer = function createEncoderBuffer(data) {
 Node.prototype._encode = function encode(data, reporter, parent) {
   var state = this._baseState;
   if (state['default'] !== null && state['default'] === data)
-    return ;
+    return;
   var result = this._encodeValue(data, reporter, parent);
   if (result === undefined)
-    return ;
+    return;
   if (this._skipDefault(result, reporter, parent))
-    return ;
+    return;
   return result;
 };
 Node.prototype._encodeValue = function encode(data, reporter, parent) {
@@ -334,7 +334,7 @@ Node.prototype._encodeValue = function encode(data, reporter, parent) {
     if (state['default'] !== null)
       data = state['default'];
     else
-      return ;
+      return;
   }
   var prevKey;
   var content = null;

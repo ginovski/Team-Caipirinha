@@ -33,7 +33,7 @@ function read(req, res, next, parse, debug, options) {
       onFinished(req, function onfinished() {
         next(err);
       });
-      return ;
+      return;
     }
     if (verify) {
       try {
@@ -42,7 +42,7 @@ function read(req, res, next, parse, debug, options) {
       } catch (err) {
         setErrorStatus(err, 403);
         next(err);
-        return ;
+        return;
       }
     }
     var str;
@@ -54,7 +54,7 @@ function read(req, res, next, parse, debug, options) {
       err.body = str === undefined ? body : str;
       setErrorStatus(err, 400);
       next(err);
-      return ;
+      return;
     }
     next();
   });

@@ -202,7 +202,7 @@
           expect(prefix).to.be.empty();
           expect(value).to.equal(obj);
         } else if (prefix === 'c') {
-          return ;
+          return;
         } else if (value instanceof Date) {
           expect(prefix).to.equal('e[f]');
           return value.getTime();
