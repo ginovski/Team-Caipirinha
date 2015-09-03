@@ -23,7 +23,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./node_modules/http-server/bin/http-server -p 8888"
+    "start": "node ./server.js"
   },
   "repository": {
     "type": "git",
@@ -37,5 +37,8 @@
   "homepage": "https://github.com/ginovski/Team-Caipirinha#readme",
   "devDependencies": {
     "jspm": "^0.16.2"
+  },
+  "dependencies": {
+    "express": "^4.13.3"
   }
 }
