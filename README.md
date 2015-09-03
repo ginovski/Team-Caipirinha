@@ -8,6 +8,7 @@ Caipirinha teamwork repository
 	<pre>npm install live-server -g</pre>
  - run live-server in the directory of the project
  
+ 
  #JavaScript Applications: Teamwork Assignment
 *****************************************
 
