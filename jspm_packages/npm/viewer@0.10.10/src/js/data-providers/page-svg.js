@@ -21,7 +21,7 @@
     }
     function processSVGContent(text) {
       if (destroyed) {
-        return ;
+        return;
       }
       var query = config.queryString.replace('&', '&#38;'),
           dataUrlCount;

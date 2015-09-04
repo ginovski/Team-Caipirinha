@@ -23,7 +23,7 @@
       } else {
         req.on('newListener', function handler(event) {
           if (event !== 'data')
-            return ;
+            return;
           req.removeListener('newListener', handler);
           process.nextTick(listen);
         });

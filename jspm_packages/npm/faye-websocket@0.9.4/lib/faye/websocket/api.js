@@ -106,7 +106,7 @@
     },
     _open: function() {
       if (this.readyState !== API.CONNECTING)
-        return ;
+        return;
       this.readyState = API.OPEN;
       this.protocol = this._driver.protocol || '';
       var event = new Event('open');
@@ -124,14 +124,14 @@
     },
     _emitError: function(message) {
       if (this.readyState >= API.CLOSING)
-        return ;
+        return;
       var event = new Event('error', {message: message});
       event.initEvent('error', false, false);
       this.dispatchEvent(event);
     },
     _beginClose: function(reason, code) {
       if (this.readyState === API.CLOSED)
-        return ;
+        return;
       this.readyState = API.CLOSING;
       if (this._stream) {
         this._stream.end();
@@ -142,7 +142,7 @@
     },
     _finalizeClose: function() {
       if (this.readyState === API.CLOSED)
-        return ;
+        return;
       this.readyState = API.CLOSED;
       if (this._pingTimer)
         clearInterval(this._pingTimer);

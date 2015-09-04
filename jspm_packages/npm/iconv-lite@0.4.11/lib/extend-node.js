@@ -5,7 +5,7 @@
     var original = undefined;
     iconv.extendNodeEncodings = function extendNodeEncodings() {
       if (original)
-        return ;
+        return;
       original = {};
       var nodeNativeEncodings = {
         'hex': true,

@@ -12,7 +12,7 @@
     });
     var self = this;
     if (!this._stream || !this._stream.writable)
-      return ;
+      return;
     if (!this._stream.readable)
       return this._stream.end();
     var catchup = function() {

@@ -83,7 +83,7 @@
         return next();
       if (!secret && !req.secret) {
         next(new Error('secret option required for sessions'));
-        return ;
+        return;
       }
       var secrets = secret || [req.secret];
       var originalHash;
@@ -94,15 +94,15 @@
       onHeaders(res, function() {
         if (!req.session) {
           debug('no session');
-          return ;
+          return;
         }
         var cookie = req.session.cookie;
         if (cookie.secure && !issecure(req, trustProxy)) {
           debug('not secured');
-          return ;
+          return;
         }
         if (!shouldSetCookie(req)) {
-          return ;
+          return;
         }
         setcookie(res, name, req.sessionID, secrets[0], cookie.data);
       });
@@ -120,7 +120,7 @@
           if (sync) {
             ret = _end.call(res, chunk, encoding);
             sync = false;
-            return ;
+            return;
           }
           _end.call(res);
         }
@@ -240,7 +240,7 @@
         debug('no SID sent, generating session');
         generate();
         next();
-        return ;
+        return;
       }
       debug('fetching %s', req.sessionID);
       store.get(req.sessionID, function(err, sess) {
@@ -248,7 +248,7 @@
           debug('error %j', err);
           if (err.code !== 'ENOENT') {
             next(err);
-            return ;
+            return;
           }
           generate();
         } else if (!sess) {

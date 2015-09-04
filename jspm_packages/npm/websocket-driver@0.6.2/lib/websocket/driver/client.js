@@ -45,15 +45,15 @@
     },
     parse: function(chunk) {
       if (this.readyState === 3)
-        return ;
+        return;
       if (this.readyState > 0)
         return Hybi.prototype.parse.call(this, chunk);
       this._http.parse(chunk);
       if (!this._http.isComplete())
-        return ;
+        return;
       this._validateHandshake();
       if (this.readyState === 3)
-        return ;
+        return;
       this._open();
       this.parse(this._http.body);
     },

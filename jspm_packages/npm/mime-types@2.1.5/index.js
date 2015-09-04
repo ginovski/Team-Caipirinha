@@ -68,7 +68,7 @@ function populateMaps(extensions, types) {
     var mime = db[type];
     var exts = mime.extensions;
     if (!exts || !exts.length) {
-      return ;
+      return;
     }
     extensions[type] = exts;
     for (var i = 0; i < exts.length; i++) {

@@ -18,7 +18,7 @@
     if (typeof this._protocols === 'string')
       this._protocols = this._protocols.split(/ *, */);
     if (!this._request)
-      return ;
+      return;
     var secKey = this._request.headers['sec-websocket-key'],
         protos = this._request.headers['sec-websocket-protocol'],
         version = this._request.headers['sec-websocket-version'],
@@ -272,7 +272,7 @@
     },
     _fail: function(type, message) {
       if (this.readyState > 1)
-        return ;
+        return;
       this._shutdown(this.ERRORS[type], message, true);
     },
     _parseOpcode: function(octet) {
@@ -302,7 +302,7 @@
       if (frame.length >= 0 && frame.length <= 125) {
         this._stage = frame.masked ? 3 : 4;
         if (!this._checkFrameLength())
-          return ;
+          return;
       } else {
         this._stage = 2;
         frame.lengthBytes = (frame.length === 126 ? 2 : 8);
@@ -317,7 +317,7 @@
       if (this.MESSAGE_OPCODES.indexOf(frame.opcode) < 0 && frame.length > 125)
         return this._fail('protocol_error', 'Received control frame having too long payload: ' + frame.length);
       if (!this._checkFrameLength())
-        return ;
+        return;
     },
     _checkFrameLength: function() {
       var length = this._message ? this._message.length : 0;

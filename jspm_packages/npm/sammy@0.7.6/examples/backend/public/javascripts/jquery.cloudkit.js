@@ -467,7 +467,7 @@
     var populateCollectionsFromRemote = function(index, callbacks) {
       if (index == collectionURIs.length) {
         callbacks.success();
-        return ;
+        return;
       }
       $.ajax({
         type: 'GET',

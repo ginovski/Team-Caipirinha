@@ -69,8 +69,8 @@
   "dependencies": {
     "create-hash": "create-hash@^1.1.0",
     "inherits": "inherits@^2.0.1",
-    "buffer": "github:jspm/nodelibs-buffer@^0.1.0",
     "stream": "github:jspm/nodelibs-stream@^0.1.0",
+    "buffer": "github:jspm/nodelibs-buffer@^0.1.0",
     "crypto": "github:jspm/nodelibs-crypto@^0.1.0"
   }
 }

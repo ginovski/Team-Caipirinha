@@ -34,7 +34,7 @@ function createServer() {
 createServer.createServer = deprecate.function(createServer, 'createServer(): use connect() instead');
 fs.readdirSync(__dirname + '/middleware').forEach(function(filename) {
   if (!/\.js$/.test(filename))
-    return ;
+    return;
   var name = basename(filename, '.js');
   function load() {
     return require('./middleware/' + name);

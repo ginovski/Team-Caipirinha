@@ -11,11 +11,11 @@
     var header = (req.req || req).headers.authorization;
     var match = credentialsRegExp.exec(header || '');
     if (!match) {
-      return ;
+      return;
     }
     var userPass = userPassRegExp.exec(decodeBase64(match[1]));
     if (!userPass) {
-      return ;
+      return;
     }
     return new Credentials(userPass[1], userPass[2]);
   }

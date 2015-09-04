@@ -38,7 +38,7 @@ module.exports = function cookieSession(options) {
         debug('clear session');
         cookie.expires = new Date(0);
         res.setHeader('Set-Cookie', cookie.serialize(key, ''));
-        return ;
+        return;
       }
       delete req.session.cookie;
       var proto = (req.headers['x-forwarded-proto'] || '').toLowerCase(),

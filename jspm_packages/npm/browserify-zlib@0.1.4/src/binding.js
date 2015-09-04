@@ -58,7 +58,7 @@
     }
     if (status !== exports.Z_OK) {
       this._error(status);
-      return ;
+      return;
     }
     this.write_in_progress = false;
     this.init_done = true;
@@ -143,7 +143,7 @@
   Zlib.prototype.close = function() {
     if (this.write_in_progress) {
       this.pending_close = true;
-      return ;
+      return;
     }
     this.pending_close = false;
     if (this.mode === exports.DEFLATE || this.mode === exports.GZIP || this.mode === exports.DEFLATERAW) {

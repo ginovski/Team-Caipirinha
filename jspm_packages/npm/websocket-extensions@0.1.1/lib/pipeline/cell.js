@@ -37,7 +37,7 @@
     var fin = this._functors.incoming,
         fout = this._functors.outgoing;
     if (!this._closed || fin.pending + fout.pending !== 0)
-      return ;
+      return;
     if (this._session)
       this._session.close();
     this._session = null;

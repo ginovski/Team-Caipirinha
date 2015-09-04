@@ -32,7 +32,8 @@
     "HISTORY.md",
     "LICENSE",
     "README.md",
-    "index.js"
+    "index.js",
+    "package.json"
   ],
   "engines": {
     "node": ">= 0.8.0"
@@ -90,7 +91,7 @@
     "stream": "github:jspm/nodelibs-stream@^0.1.0",
     "path": "github:jspm/nodelibs-path@^0.1.0",
     "fs": "github:jspm/nodelibs-fs@^0.1.0",
-    "events": "github:jspm/nodelibs-events@^0.1.0",
+    "events": "github:jspm/nodelibs-events@^0.1.1",
     "buffer": "github:jspm/nodelibs-buffer@^0.1.0"
   }
 }

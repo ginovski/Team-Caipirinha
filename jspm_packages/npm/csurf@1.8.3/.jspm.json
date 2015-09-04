@@ -38,7 +38,8 @@
   "files": [
     "HISTORY.md",
     "LICENSE",
-    "index.js"
+    "index.js",
+    "package.json"
   ],
   "keywords": [
     "csrf",

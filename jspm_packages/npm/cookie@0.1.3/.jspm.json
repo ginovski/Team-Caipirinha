@@ -22,7 +22,8 @@
   "files": [
     "LICENSE",
     "README.md",
-    "index.js"
+    "index.js",
+    "package.json"
   ],
   "engines": {
     "node": "*"

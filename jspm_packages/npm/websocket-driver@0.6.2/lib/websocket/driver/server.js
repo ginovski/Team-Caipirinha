@@ -22,7 +22,7 @@ var instance = {
       return this._delegate.parse(chunk);
     this._http.parse(chunk);
     if (!this._http.isComplete())
-      return ;
+      return;
     this.method = this._http.method;
     this.url = this._http.url;
     this.headers = this._http.headers;

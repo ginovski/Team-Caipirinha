@@ -34,7 +34,7 @@
         res.setHeader('Allow', 'GET, HEAD');
         res.setHeader('Content-Length', '0');
         res.end();
-        return ;
+        return;
       }
       var forwardError = !fallthrough;
       var originalUrl = parseUrl.original(req);
@@ -55,7 +55,7 @@
       stream.on('error', function error(err) {
         if (forwardError || !(err.statusCode < 500)) {
           next(err);
-          return ;
+          return;
         }
         next();
       });
@@ -79,7 +79,7 @@
     return function redirect() {
       if (this.hasTrailingSlash()) {
         this.error(404);
-        return ;
+        return;
       }
       var originalUrl = parseUrl.original(this.req);
       originalUrl.path = null;

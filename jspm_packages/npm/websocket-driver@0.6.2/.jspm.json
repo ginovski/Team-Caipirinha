@@ -59,7 +59,7 @@
     "websocket-extensions": "websocket-extensions@*",
     "net": "github:jspm/nodelibs-net@^0.1.0",
     "process": "github:jspm/nodelibs-process@^0.1.0",
-    "events": "github:jspm/nodelibs-events@^0.1.0",
+    "events": "github:jspm/nodelibs-events@^0.1.1",
     "util": "github:jspm/nodelibs-util@^0.1.0",
     "crypto": "github:jspm/nodelibs-crypto@^0.1.0",
     "url": "github:jspm/nodelibs-url@^0.1.0",

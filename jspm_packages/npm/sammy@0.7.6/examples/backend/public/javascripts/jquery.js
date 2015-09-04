@@ -220,7 +220,7 @@
       },
       bindReady: function() {
         if (readyBound) {
-          return ;
+          return;
         }
         readyBound = true;
         if (document.readyState === "complete") {
@@ -451,13 +451,13 @@
     }
     function doScrollCheck() {
       if (jQuery.isReady) {
-        return ;
+        return;
       }
       try {
         document.documentElement.doScroll("left");
       } catch (error) {
         setTimeout(doScrollCheck, 1);
-        return ;
+        return;
       }
       jQuery.ready();
     }
@@ -506,7 +506,7 @@
       var all = div.getElementsByTagName("*"),
           a = div.getElementsByTagName("a")[0];
       if (!all || !all.length || !a) {
-        return ;
+        return;
       }
       jQuery.support = {
         leadingWhitespace: div.firstChild.nodeType === 3,
@@ -594,7 +594,7 @@
       },
       data: function(elem, name, data) {
         if (elem.nodeName && jQuery.noData[elem.nodeName.toLowerCase()]) {
-          return ;
+          return;
         }
         elem = elem == window ? windowData : elem;
         var id = elem[expando],
@@ -624,7 +624,7 @@
       },
       removeData: function(elem, name) {
         if (elem.nodeName && jQuery.noData[elem.nodeName.toLowerCase()]) {
-          return ;
+          return;
         }
         elem = elem == window ? windowData : elem;
         var id = elem[expando],
@@ -681,7 +681,7 @@
     jQuery.extend({
       queue: function(elem, type, data) {
         if (!elem) {
-          return ;
+          return;
         }
         type = (type || "fx") + "queue";
         var q = jQuery.data(elem, type);
@@ -902,7 +902,7 @@
           var self = jQuery(this),
               val = value;
           if (this.nodeType !== 1) {
-            return ;
+            return;
           }
           if (isFunction) {
             val = value.call(this, i, self.val());
@@ -997,7 +997,7 @@
     jQuery.event = {
       add: function(elem, types, handler, data) {
         if (elem.nodeType === 3 || elem.nodeType === 8) {
-          return ;
+          return;
         }
         if (elem.setInterval && (elem !== window && !elem.frameElement)) {
           elem = window;
@@ -1020,7 +1020,7 @@
           handle = jQuery.data(elem, "handle", eventHandle);
         }
         if (!handle) {
-          return ;
+          return;
         }
         handle.elem = elem;
         types = types.split(/\s+/);
@@ -1065,7 +1065,7 @@
       global: {},
       remove: function(elem, types, handler) {
         if (elem.nodeType === 3 || elem.nodeType === 8) {
-          return ;
+          return;
         }
         var events = jQuery.data(elem, "events"),
             ret,
@@ -1335,7 +1335,7 @@
         this.isDefaultPrevented = returnTrue;
         var e = this.originalEvent;
         if (!e) {
-          return ;
+          return;
         }
         if (e.preventDefault) {
           e.preventDefault();
@@ -1346,7 +1346,7 @@
         this.isPropagationStopped = returnTrue;
         var e = this.originalEvent;
         if (!e) {
-          return ;
+          return;
         }
         if (e.stopPropagation) {
           e.stopPropagation();
@@ -1441,7 +1441,7 @@
             data,
             val;
         if (!formElems.test(elem.nodeName) || elem.readOnly) {
-          return ;
+          return;
         }
         data = jQuery.data(elem, "_change_data");
         val = getVal(elem);
@@ -1449,7 +1449,7 @@
           jQuery.data(elem, "_change_data", val);
         }
         if (data === undefined || val === data) {
-          return ;
+          return;
         }
         if (data != null || val) {
           e.type = "change";
@@ -1622,7 +1622,7 @@
           data,
           live = jQuery.extend({}, jQuery.data(this, "events").live);
       if (event.button && event.type === "click") {
-        return ;
+        return;
       }
       for (j in live) {
         fn = live[j];
@@ -2425,7 +2425,7 @@
               div = document.createElement("div");
           div.innerHTML = "<p class='TEST'></p>";
           if (div.querySelectorAll && div.querySelectorAll(".TEST").length === 0) {
-            return ;
+            return;
           }
           Sizzle = function(query, context, extra, seed) {
             context = context || document;
@@ -2446,11 +2446,11 @@
         var div = document.createElement("div");
         div.innerHTML = "<div class='test e'></div><div class='test'></div>";
         if (!div.getElementsByClassName || div.getElementsByClassName("e").length === 0) {
-          return ;
+          return;
         }
         div.lastChild.className = "e";
         if (div.getElementsByClassName("e").length === 1) {
-          return ;
+          return;
         }
         Expr.order.splice(1, 0, "CLASS");
         Expr.find.CLASS = function(match, context, isXML) {
@@ -2551,7 +2551,7 @@
       jQuery.getText = getText;
       jQuery.isXMLDoc = isXML;
       jQuery.contains = contains;
-      return ;
+      return;
       window.Sizzle = Sizzle;
     })();
     var runtil = /Until$/,
@@ -3022,7 +3022,7 @@
       var i = 0;
       ret.each(function() {
         if (this.nodeName !== (orig[i] && orig[i].nodeName)) {
-          return ;
+          return;
         }
         var oldData = jQuery.data(orig[i++]),
             curData = jQuery.data(this, oldData),
@@ -3122,7 +3122,7 @@
             elem += "";
           }
           if (!elem) {
-            return ;
+            return;
           }
           if (typeof elem === "string" && !rhtml.test(elem)) {
             elem = context.createTextNode(elem);
@@ -3246,7 +3246,7 @@
           function getWH() {
             val = name === "width" ? elem.offsetWidth : elem.offsetHeight;
             if (extra === "border") {
-              return ;
+              return;
             }
             jQuery.each(which, function() {
               if (!extra) {
@@ -3557,7 +3557,7 @@
         var requestDone = false;
         var xhr = s.xhr();
         if (!xhr) {
-          return ;
+          return;
         }
         if (s.username) {
           xhr.open(type, s.url, s.async, s.username, s.password);

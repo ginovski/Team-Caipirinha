@@ -34,7 +34,8 @@
     "session/",
     "HISTORY.md",
     "LICENSE",
-    "index.js"
+    "index.js",
+    "package.json"
   ],
   "engines": {
     "node": ">= 0.8.0"
@@ -92,7 +93,7 @@
     "utils-merge": "utils-merge@1.0.0",
     "util": "github:jspm/nodelibs-util@^0.1.0",
     "process": "github:jspm/nodelibs-process@^0.1.0",
-    "events": "github:jspm/nodelibs-events@^0.1.0",
+    "events": "github:jspm/nodelibs-events@^0.1.1",
     "buffer": "github:jspm/nodelibs-buffer@^0.1.0"
   }
 }

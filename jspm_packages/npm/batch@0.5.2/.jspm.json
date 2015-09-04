@@ -57,7 +57,7 @@
   },
   "registry": "npm",
   "dependencies": {
-    "events": "github:jspm/nodelibs-events@^0.1.0",
+    "events": "github:jspm/nodelibs-events@^0.1.1",
     "process": "github:jspm/nodelibs-process@^0.1.0"
   }
 }

@@ -322,7 +322,7 @@
     if (callback)
       process.nextTick(callback);
     if (this._closed)
-      return ;
+      return;
     this._closed = true;
     this._binding.close();
     var self = this;
@@ -376,7 +376,7 @@
     req.callback = callback;
     function callback(availInAfter, availOutAfter) {
       if (self._hadError)
-        return ;
+        return;
       var have = availOutBefore - availOutAfter;
       assert(have >= 0, 'have should not go down');
       if (have > 0) {
@@ -402,7 +402,7 @@
         var newReq = self._binding.write(flushFlag, chunk, inOff, availInBefore, self._buffer, self._offset, self._chunkSize);
         newReq.callback = callback;
         newReq.buffer = chunk;
-        return ;
+        return;
       }
       if (!async)
         return false;

@@ -43,7 +43,7 @@ function urlencoded(options) {
     if (charset !== 'utf-8') {
       debug('invalid charset');
       next(createError(415, 'unsupported charset "' + charset.toUpperCase() + '"', {charset: charset}));
-      return ;
+      return;
     }
     read(req, res, next, parse, debug, {
       debug: debug,

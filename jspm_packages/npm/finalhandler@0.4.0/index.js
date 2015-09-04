@@ -19,7 +19,7 @@
       var status = res.statusCode;
       if (!err && res._header) {
         debug('cannot 404 after headers sent');
-        return ;
+        return;
       }
       if (err) {
         if (err.statusCode) {
@@ -55,13 +55,13 @@
       res.setHeader('Content-Length', Buffer.byteLength(body, 'utf8'));
       if (req.method === 'HEAD') {
         res.end();
-        return ;
+        return;
       }
       res.end(body, 'utf8');
     }
     if (isFinished(req)) {
       write();
-      return ;
+      return;
     }
     unpipe(req);
     onFinished(req, write);

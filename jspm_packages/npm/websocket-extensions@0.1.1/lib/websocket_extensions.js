@@ -35,7 +35,7 @@
       this._inOrder.forEach(function(ext) {
         var session = ext.createClientSession();
         if (!session)
-          return ;
+          return;
         var record = [ext, session];
         sessions.push(record);
         index[ext.name] = record;
@@ -76,10 +76,10 @@
       this._inOrder.forEach(function(ext) {
         var offer = offers.byName(ext.name);
         if (offer.length === 0 || this._reserved(ext))
-          return ;
+          return;
         var session = ext.createServerSession(offer);
         if (!session)
-          return ;
+          return;
         this._reserve(ext);
         sessions.push([ext, session]);
         response.push(Parser.serializeParams(ext.name, session.generateResponse()));

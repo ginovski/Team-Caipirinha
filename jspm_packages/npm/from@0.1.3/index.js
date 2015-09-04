@@ -28,7 +28,7 @@
     function next() {
       s.started = true;
       if (s.ended)
-        return ;
+        return;
       while (!s.ended && !s.paused && source.call(s, i++, function() {
         if (!s.ended && !s.paused)
           next();

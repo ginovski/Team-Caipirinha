@@ -8,7 +8,7 @@ function Signature(options, enc) {
   if (options instanceof Signature)
     return options;
   if (this._importDER(options, enc))
-    return ;
+    return;
   assert(options.r && options.s, 'Signature without r or s');
   this.r = new bn(options.r, 16);
   this.s = new bn(options.s, 16);

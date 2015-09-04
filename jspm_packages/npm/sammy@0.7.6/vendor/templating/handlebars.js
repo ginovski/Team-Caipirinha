@@ -867,7 +867,7 @@
               if (token)
                 return token;
               else
-                return ;
+                return;
             }
           }
           if (this._input === "") {
@@ -1482,7 +1482,7 @@
       },
       addDepth: function(depth) {
         if (depth === 0) {
-          return ;
+          return;
         }
         if (!this.depths[depth]) {
           this.depths[depth] = true;

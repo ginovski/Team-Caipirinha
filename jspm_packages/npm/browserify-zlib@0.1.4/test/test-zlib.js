@@ -70,15 +70,15 @@
   SlowStream.prototype.resume = function() {
     var self = this;
     if (self.ended)
-      return ;
+      return;
     self.emit('resume');
     if (!self.chunk)
-      return ;
+      return;
     self.paused = false;
     emit();
     function emit() {
       if (self.paused)
-        return ;
+        return;
       if (self.offset >= self.length) {
         self.ended = true;
         return self.emit('end');

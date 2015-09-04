@@ -61,7 +61,7 @@
       layer = stack[index++];
       if (!layer) {
         defer(done, err);
-        return ;
+        return;
       }
       try {
         path = parseUrl(req).pathname;

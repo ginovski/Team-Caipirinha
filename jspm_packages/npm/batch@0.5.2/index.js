@@ -53,7 +53,7 @@
       var i = index++;
       var fn = fns[i];
       if (!fn)
-        return ;
+        return;
       var start = new Date;
       try {
         fn(callback);
@@ -62,7 +62,7 @@
       }
       function callback(err, res) {
         if (done)
-          return ;
+          return;
         if (err && throws)
           return done = true, cb(err);
         var complete = total - pending + 1;

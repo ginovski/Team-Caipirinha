@@ -39,14 +39,14 @@
     function onSocket(socket) {
       msg.removeListener('socket', onSocket);
       if (finished)
-        return ;
+        return;
       if (eeMsg !== eeSocket)
-        return ;
+        return;
       eeSocket = first([[socket, 'error', 'close']], onFinish);
     }
     if (msg.socket) {
       onSocket(msg.socket);
-      return ;
+      return;
     }
     msg.on('socket', onSocket);
     if (msg.socket === undefined) {
@@ -66,7 +66,7 @@
       if (msg.__onFinished === listener)
         msg.__onFinished = null;
       if (!listener.queue)
-        return ;
+        return;
       var queue = listener.queue;
       listener.queue = null;
       for (var i = 0; i < queue.length; i++) {
@@ -79,7 +79,7 @@
   function patchAssignSocket(res, callback) {
     var assignSocket = res.assignSocket;
     if (typeof assignSocket !== 'function')
-      return ;
+      return;
     res.assignSocket = function _assignSocket(socket) {
       assignSocket.call(this, socket);
       callback(socket);

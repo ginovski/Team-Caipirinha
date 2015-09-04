@@ -56,7 +56,7 @@
         });
         form.on('close', function() {
           if (done)
-            return ;
+            return;
           try {
             req.body = qs.parse(data, {
               allowDots: false,
@@ -68,7 +68,7 @@
             });
           } catch (err) {
             form.emit('error', err);
-            return ;
+            return;
           }
           if (!options.defer)
             next();

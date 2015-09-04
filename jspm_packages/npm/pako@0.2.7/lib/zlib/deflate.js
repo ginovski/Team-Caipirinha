@@ -70,7 +70,7 @@
       len = strm.avail_out;
     }
     if (len === 0) {
-      return ;
+      return;
     }
     utils.arraySet(strm.output, s.pending_buf, s.pending_out, len, strm.next_out);
     strm.next_out += len;

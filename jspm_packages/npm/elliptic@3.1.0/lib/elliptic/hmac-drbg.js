@@ -44,7 +44,7 @@ HmacDRBG.prototype._update = function update(seed) {
   this.K = kmac.digest();
   this.V = this._hmac().update(this.V).digest();
   if (!seed)
-    return ;
+    return;
   this.K = this._hmac().update(this.V).update([0x01]).update(seed).digest();
   this.V = this._hmac().update(this.V).digest();
 };

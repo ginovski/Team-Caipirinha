@@ -56,13 +56,13 @@
   function getSession(sessionId) {
     var sess = this.sessions[sessionId];
     if (!sess) {
-      return ;
+      return;
     }
     sess = JSON.parse(sess);
     var expires = typeof sess.cookie.expires === 'string' ? new Date(sess.cookie.expires) : sess.cookie.expires;
     if (expires && expires <= Date.now()) {
       delete this.sessions[sessionId];
-      return ;
+      return;
     }
     return sess;
   }

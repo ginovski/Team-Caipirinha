@@ -310,7 +310,7 @@
       });
       safefs.readdir(opts.path, function(err, files) {
         if (tasks.exited) {
-          return ;
+          return;
         } else if (err) {
           return tasks.exit(err);
         }

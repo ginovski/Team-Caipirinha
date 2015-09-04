@@ -59,16 +59,16 @@
   "registry": "npm",
   "dependencies": {
     "websocket-driver": "websocket-driver@*",
-    "fs": "github:jspm/nodelibs-fs@^0.1.0",
     "process": "github:jspm/nodelibs-process@^0.1.0",
+    "fs": "github:jspm/nodelibs-fs@^0.1.0",
     "http": "github:jspm/nodelibs-http@^1.7.0",
     "https": "github:jspm/nodelibs-https@^0.1.0",
-    "util": "github:jspm/nodelibs-util@^0.1.0",
     "stream": "github:jspm/nodelibs-stream@^0.1.0",
+    "util": "github:jspm/nodelibs-util@^0.1.0",
+    "buffer": "github:jspm/nodelibs-buffer@^0.1.0",
     "net": "github:jspm/nodelibs-net@^0.1.0",
     "tls": "github:jspm/nodelibs-tls@^0.1.0",
     "crypto": "github:jspm/nodelibs-crypto@^0.1.0",
-    "url": "github:jspm/nodelibs-url@^0.1.0",
-    "buffer": "github:jspm/nodelibs-buffer@^0.1.0"
+    "url": "github:jspm/nodelibs-url@^0.1.0"
   }
 }

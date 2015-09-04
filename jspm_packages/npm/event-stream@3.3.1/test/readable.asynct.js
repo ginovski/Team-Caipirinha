@@ -58,7 +58,7 @@
         called = 0;
     var reader = es.readable(function(i, callback) {
       if (called++)
-        return ;
+        return;
       callback(err);
     });
     reader.on('error', function(_err) {

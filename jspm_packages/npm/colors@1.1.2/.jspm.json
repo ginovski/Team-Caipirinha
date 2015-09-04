@@ -31,7 +31,8 @@
     "lib",
     "LICENSE",
     "safe.js",
-    "themes"
+    "themes",
+    "package.json"
   ],
   "gitHead": "8bf2ad9fa695dcb30b7e9fd83691b139fd6655c4",
   "_id": "colors@1.1.2",

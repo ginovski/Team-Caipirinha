@@ -22,23 +22,23 @@ module.exports = function staticCache(options) {
       if (headers['set-cookie'])
         return hasCookies = true;
       if (hasCookies)
-        return ;
+        return;
       if (!contentLength || contentLength > maxlen)
-        return ;
+        return;
       if (headers['content-range'])
-        return ;
+        return;
       if (cc['no-cache'] || cc['no-store'] || cc['private'] || cc['must-revalidate'])
-        return ;
+        return;
       if (hit = cache.get(key)) {
         if (headers.etag == hit[0].etag) {
           hit[0].date = new Date;
-          return ;
+          return;
         } else {
           cache.remove(key);
         }
       }
       if (null == stream)
-        return ;
+        return;
       var arr = [];
       stream.on('data', function(chunk) {
         arr.push(chunk);
@@ -88,7 +88,7 @@ function respondFromCache(req, res, cacheEntry) {
           while (content.length) {
             if (false === res.write(content.shift())) {
               res.once('drain', write);
-              return ;
+              return;
             }
           }
           res.end();

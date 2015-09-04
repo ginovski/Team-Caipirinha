@@ -3,7 +3,7 @@
 (function(process) {
   (function(factory) {
     if (typeof define === 'function' && define.amd) {
-      define(["jquery","sammy"], factory);
+      define(['jquery', 'sammy'], factory);
     } else {
       (window.Sammy = window.Sammy || {}).Form = factory(window.jQuery, window.Sammy);
     }

@@ -74,8 +74,8 @@
     "bn.js": "bn.js@^2.0.0",
     "miller-rabin": "miller-rabin@^2.0.0",
     "randombytes": "randombytes@^2.0.0",
-    "buffer": "github:jspm/nodelibs-buffer@^0.1.0",
     "systemjs-json": "github:systemjs/plugin-json@^0.1.0",
+    "buffer": "github:jspm/nodelibs-buffer@^0.1.0",
     "crypto": "github:jspm/nodelibs-crypto@^0.1.0"
   }
 }

@@ -2,7 +2,7 @@
 "format cjs";
 (function (factory) {
   if (typeof define === 'function' && define.amd) {
-    define(["jquery","sammy","handlebars"], factory);
+    define(['jquery', 'sammy', 'handlebars'], factory);
   } else {
     (window.Sammy = window.Sammy || {}).Handlebars = factory(window.jQuery, window.Sammy);
   }

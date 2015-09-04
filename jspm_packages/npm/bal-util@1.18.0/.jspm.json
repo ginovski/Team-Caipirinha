@@ -91,14 +91,14 @@
     "safefs": "safefs@~2.0.3",
     "taskgroup": "taskgroup@~2.0.0",
     "typechecker": "typechecker@~2.0.1",
-    "events": "github:jspm/nodelibs-events@^0.1.0",
+    "events": "github:jspm/nodelibs-events@^0.1.1",
     "path": "github:jspm/nodelibs-path@^0.1.0",
-    "child_process": "github:jspm/nodelibs-child_process@^0.1.0",
-    "process": "github:jspm/nodelibs-process@^0.1.0",
     "url": "github:jspm/nodelibs-url@^0.1.0",
     "https": "github:jspm/nodelibs-https@^0.1.0",
     "http": "github:jspm/nodelibs-http@^1.7.0",
     "zlib": "github:jspm/nodelibs-zlib@^0.1.0",
-    "buffer": "github:jspm/nodelibs-buffer@^0.1.0"
+    "buffer": "github:jspm/nodelibs-buffer@^0.1.0",
+    "process": "github:jspm/nodelibs-process@^0.1.0",
+    "child_process": "github:jspm/nodelibs-child_process@^0.1.0"
   }
 }

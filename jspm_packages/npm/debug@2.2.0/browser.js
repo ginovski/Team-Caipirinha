@@ -25,7 +25,7 @@ function formatArgs() {
   var lastC = 0;
   args[0].replace(/%[a-z%]/g, function(match) {
     if ('%%' === match)
-      return ;
+      return;
     index++;
     if ('%c' === match) {
       lastC = index;
