@@ -38,8 +38,14 @@ var UsersController = (function () {
             });
         userModel.signIn(username, password)
             .then(function (user) {
-                context.redirect('#/titles');
-                document.location.reload(true);
+                context.redirect('#/');
+                if(user){
+                    $('#username').html("Hello " + user.username);
+                    $('.logout').show();
+                    document.location.reload(true);
+                } else {
+                    $('.login').show();
+                }
             });
     }
 
@@ -51,7 +57,13 @@ var UsersController = (function () {
         userModel.signUp(email, username, password)
             .then(function (user) {
                 context.redirect('#/');
-                document.location.reload(true);
+                if(user){
+                    $('#username').html("Hello " + user.username);
+                    $('.logout').show();
+                    document.location.reload(true);
+                } else {
+                    $('.login').show();
+                }
             });
     }
 
