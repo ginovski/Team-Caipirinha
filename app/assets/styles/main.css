@@ -67,6 +67,10 @@ footer {
     text-align: center;
 }
 
+.login, .logout{
+    display: none;
+}
+
 /*
 footer {
     background-color: black;

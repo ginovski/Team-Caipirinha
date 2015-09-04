@@ -40,6 +40,8 @@ var UsersController = (function () {
             .then(function (user) {
                 context.redirect('#/titles');
             });
+
+        document.location.reload(true);
     }
 
     function postRegister(context) {
@@ -51,6 +53,8 @@ var UsersController = (function () {
             .then(function (user) {
                 context.redirect('#/');
             });
+
+        document.location.reload(true);
     }
 
     return {
