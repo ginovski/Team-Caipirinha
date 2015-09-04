@@ -39,9 +39,8 @@ var UsersController = (function () {
         userModel.signIn(username, password)
             .then(function (user) {
                 context.redirect('#/titles');
+                document.location.reload(true);
             });
-
-        document.location.reload(true);
     }
 
     function postRegister(context) {
@@ -52,9 +51,8 @@ var UsersController = (function () {
         userModel.signUp(email, username, password)
             .then(function (user) {
                 context.redirect('#/');
+                document.location.reload(true);
             });
-
-        document.location.reload(true);
     }
 
     return {
